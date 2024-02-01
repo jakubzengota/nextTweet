@@ -10,3 +10,6 @@ async function getUsers(client) {
         throw error;
     }
 }
+
+
+// Zapytanka wykonywane przez użytkownika
