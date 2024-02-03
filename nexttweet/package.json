@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "init-db": "node init-db.js"
   },
   "dependencies": {
     "@vercel/postgres": "^0.7.2",
