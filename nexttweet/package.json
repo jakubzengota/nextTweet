@@ -10,8 +10,13 @@
     "init-db": "node init-db.js"
   },
   "dependencies": {
+    "@nextui-org/button": "^2.0.26",
+    "@nextui-org/react": "^2.2.9",
+    "@nextui-org/system": "^2.0.15",
+    "@nextui-org/theme": "^2.1.17",
     "@vercel/postgres": "^0.7.2",
     "dotenv": "^16.4.1",
+    "framer-motion": "^11.0.3",
     "next": "14.0.4",
     "pg": "^8.11.3",
     "react": "^18",
