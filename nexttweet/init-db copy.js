@@ -18,7 +18,7 @@ const pool = new Pool({
 
 const queryText = 
 
-`CREATE TABLE users (
+`CREATE TABLE IF NOT EXISTS users (
   user_id SERIAL PRIMARY KEY,
   username VARCHAR(50) UNIQUE NOT NULL,
   email VARCHAR(255) UNIQUE NOT NULL,
@@ -74,10 +74,10 @@ const insertUsers = async () => {
 
 // const insertTweets = async () => {
 //   const query = `
-//     INSERT INTO tweets (user_id, content) VALUES
-//     (4, 'Exploring the beauty of nature! #nature #adventure'),
-//     (7, 'Just finished a great book on Python programming. #coding #python'),
-//     (2, 'Can't wait for the weekend to start! #TGIF');
+    // INSERT INTO tweets (user_id, content) VALUES
+    // (4, 'Exploring the beauty of nature! #nature #adventure'),
+    // (7, 'Just finished a great book on Python programming. #coding #python'),
+    // (2, 'Can't wait for the weekend to start! #TGIF');
 //   `;
 //   try {
 //     await pool.query(query);
