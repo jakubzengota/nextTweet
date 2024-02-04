@@ -1,16 +1,20 @@
 export default async function handler(req, res) {
-    if (req.method === 'POST') {         //POST SPRAWDZA przesłane dane logowania, moge zmieniać niżej co ma konkretnie sprawdzać
-      const { email, password } = req.body;
-      // Tutaj możesz dodać logikę weryfikacji danych logowania, np. sprawdzając w bazie danych
-  
-      if (email === 'example@example.com' && password === 'moje_haslo') {
+  if (req.method === 'POST') {
+    // Pobierz dane użytkownika z żądania
+    const { username, password } = req.body;
 
-        res.status(200).json({ message: 'Logowanie powiodło się' });
-      } else {
-        res.status(401).json({ message: 'Błąd logowania' });
-      }
+    // Sprawdź, czy dane logowania są poprawne
+    // Uwaga: Poniżej jest przykład; w prawdziwej aplikacji powinieneś sprawdzić te dane w bazie danych
+    if (username === 'testuser' && password === 'testpassword') {
+      // Logowanie zakończone sukcesem
+      res.status(200).json({ success: true, message: 'Zalogowano pomyślnie' });
     } else {
-      // Obsługuje tylko żądania POST
-      res.status(405).end();
+      // Niepoprawne dane logowania
+      res.status(401).json({ success: false, message: 'Niepoprawne dane logowania' });
     }
+  } else {
+    // Obsługa innych metod niż POST
+    res.setHeader('Allow', ['POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
+}

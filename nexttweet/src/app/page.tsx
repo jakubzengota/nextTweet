@@ -1,4 +1,6 @@
 import { sql } from "@vercel/postgres";
+import LoginPage from "../pages/login"
+
 
 export default async function Cart({
   params
@@ -6,9 +8,11 @@ export default async function Cart({
   params: { user: string }
 }): Promise<JSX.Element> {
 
+  
+
   return (
-    <div>
-        <span>qweqwe</span>
-    </div>
+   <>
+    <LoginPage/>
+   </>
   );
 }

@@ -17,42 +17,42 @@ const pool = new Pool({
 // node init-db
 // Wyjebac usersa, i nowa tabele, Imie, nazwisko, liczba obserwujacych, liczba obserwowanych, STATUS(usuniety czy nie), maila, 
 
-// const createTableUsers = `
-// CREATE TABLE IF NOT EXISTS users (
-//   user_id SERIAL PRIMARY KEY,
-//   username VARCHAR(50) UNIQUE NOT NULL,
-//   email VARCHAR(255) UNIQUE NOT NULL,
-//   password_hash VARCHAR(255) CHECK (
-//       length(password_hash) >= 8 AND
-//       length(password_hash) <= 255 AND
-//       password_hash ~ '[A-Z]' AND         
-//       password_hash ~ '[0-9]' AND         
-//       password_hash ~ '[!@#$%^&*()]'      
-//   ) NOT NULL,
-//   profile_description TEXT CHECK (length(profile_description) <= 500),
-//   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-//   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-//   followers_count INT DEFAULT 0,
-//   following_count INT DEFAULT 0,
-//   CHECK (length(username) >= 3 AND length(username) <= 50),
-//   CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
-//   account_status VARCHAR(20) DEFAULT 'active' CHECK (
-//       account_status IN ('active', 'banned', 'suspended')
-//   )
-// );`;
+const createTableUsers = `
+CREATE TABLE IF NOT EXISTS users (
+  user_id SERIAL PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password_hash VARCHAR(255) CHECK (
+      length(password_hash) >= 8 AND
+      length(password_hash) <= 255 AND
+      password_hash ~ '[A-Z]' AND         
+      password_hash ~ '[0-9]' AND         
+      password_hash ~ '[!@#$%^&*()]'      
+  ) NOT NULL,
+  profile_description TEXT CHECK (length(profile_description) <= 500),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  followers_count INT DEFAULT 0,
+  following_count INT DEFAULT 0,
+  CHECK (length(username) >= 3 AND length(username) <= 50),
+  CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
+  account_status VARCHAR(20) DEFAULT 'active' CHECK (
+      account_status IN ('active', 'banned', 'suspended')
+  )
+);`;
 
 
-// // Password123!
-// const insertUsersData = `
-// INSERT INTO users (username, email, password_hash, profile_description, followers_count, following_count, account_status) VALUES
-//   ('EmilyJones', 'emilyjones@example.com', 'Passw0rd$A', 'Exploring new places and cultures', 120, 75, 'active'),
-//   ('MichaelSmith', 'michaelsmith@mail.com', 'M1chael$B', 'Love coding and coffee', 215, 102, 'active'),
-//   ('JessicaTaylor', 'jessicataylor@test.org', 'J3ss!ca$C', 'Passionate about music and art', 180, 210, 'active'),
-//   ('DavidJohnson', 'davidjohnson@sample.net', 'Dav1dJ$D', 'Tech enthusiast and gamer', 300, 150, 'active'),
-//   ('SarahBrown', 'sarahbrown@domain.com', 'Password3$', 'Fitness guru and lifestyle blogger', 450, 322, 'active'),
-//   ('JamesWilliams', 'jameswilliams@online.org', 'Jam3sW$F', 'Aspiring chef and food critic', 220, 198, 'active'),
-//   ('LindaMartinez', 'lindamartinez@website.com', 'L1ndaM$G', 'Travel blogger sharing my adventures', 350, 415, 'active');
-// `;
+// Password123!
+const insertUsersData = `
+INSERT INTO users (username, email, password_hash, profile_description, followers_count, following_count, account_status) VALUES
+  ('EmilyJones', 'emilyjones@example.com', 'Passw0rd$A', 'Exploring new places and cultures', 120, 75, 'active'),
+  ('MichaelSmith', 'michaelsmith@mail.com', 'M1chael$B', 'Love coding and coffee', 215, 102, 'active'),
+  ('JessicaTaylor', 'jessicataylor@test.org', 'J3ss!ca$C', 'Passionate about music and art', 180, 210, 'active'),
+  ('DavidJohnson', 'davidjohnson@sample.net', 'Dav1dJ$D', 'Tech enthusiast and gamer', 300, 150, 'active'),
+  ('SarahBrown', 'sarahbrown@domain.com', 'Password3$', 'Fitness guru and lifestyle blogger', 450, 322, 'active'),
+  ('JamesWilliams', 'jameswilliams@online.org', 'Jam3sW$F', 'Aspiring chef and food critic', 220, 198, 'active'),
+  ('LindaMartinez', 'lindamartinez@website.com', 'L1ndaM$G', 'Travel blogger sharing my adventures', 350, 415, 'active');
+`;
 
 
 
@@ -71,9 +71,9 @@ const createTableTweets = `
 
 const insertTweets = `
   INSERT INTO tweets (user_id, content) VALUES
-    (11, 'Exploring the beauty of nature'),
-    (12, 'Just finished a great book on Python programming'),
-    (13, 'Cannot wait for the weekend to start');
+    (1, 'Exploring the beauty of nature'),
+    (1, 'Just finished a great book on Python programming'),
+    (1, 'Cannot wait for the weekend to start');
 `;
 
 
@@ -251,8 +251,8 @@ const insertTweets = `
 
 async function initDb() {
   try {
-    // await pool.query(createTableUsers);
-    // await pool.query(insertUsersData);
+    await pool.query(createTableUsers);
+    await pool.query(insertUsersData);
     await pool.query(createTableTweets);
     await pool.query(insertTweets);
     //TUTAJ POTEM RESZTE WRZUCIC
