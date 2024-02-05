@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+export default async function login(req, res) {
   if (req.method === 'POST') {
     // Pobierz dane użytkownika z żądania
     const { username, password } = req.body;
