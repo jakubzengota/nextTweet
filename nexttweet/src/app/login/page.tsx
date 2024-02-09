@@ -13,7 +13,7 @@ export default function Page() {
         event.preventDefault(); // Prevent the default form submission behavior
 
         // Now, use state variables `username` and `password` directly
-        const response = await fetch('/login', {
+        const response = await fetch('/api/Auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

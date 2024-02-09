@@ -17,6 +17,7 @@
     "@nextui-org/system": "^2.0.15",
     "@nextui-org/theme": "^2.1.17",
     "@vercel/postgres": "^0.7.2",
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.4.1",
     "framer-motion": "^11.0.3",
     "next": "14.0.4",
