@@ -10,11 +10,12 @@ pool.connect()
   .then(() => console.log('Połączono z bazą danych'))
   .catch(err => console.error('Błąd połączenia z bazą danych', err));
 
-export default async function handler(req, res) {
-  if (req.method === 'POST') {
-    const { login, password } = req.body;
-    try {
-      const { rows } = await pool.query('SELECT password_hash FROM users WHERE username = $1 OR email = $1', [login]);
+  export default async function handler(req, res) {
+    if (req.method === 'POST') {
+      // Change `login` to `username` to match the client-side code
+      const { username, password } = req.body;
+      try {
+        const { rows } = await pool.query('SELECT password_hash FROM users WHERE username = $1 OR email = $1', [username]);
       console.log("rows :", rows)
       console.log("req.body :", req.body)
       if (rows.length === 0) {
