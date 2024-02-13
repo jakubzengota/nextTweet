@@ -39,6 +39,7 @@ export default function Page() {
     };
 
     return (
+        <>
             <div className="background">
                 <div className="shape"></div>
                 <div className="shape"></div>
@@ -73,7 +74,11 @@ export default function Page() {
                         </div>
                     </div>
                 </form>
+                
             </div>
+            
+            </>
+            
     );
 };
 
