@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import FacebookIcon from '../../assets/icons/facebook.png';
-import GoogleIcon from '../../assets/icons/google.png';
+import banzai from '../../assets/icons/banzai.png'
+
 
 export default function Page() {
    
@@ -13,7 +13,12 @@ export default function Page() {
               
                 
             </div>
-            
+
+
+            <div> 
+                <Image src={banzai} alt='banzai' /> 
+            </div>
+
             </>
             
     );
