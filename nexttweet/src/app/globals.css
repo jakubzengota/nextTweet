@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Bungee Hairline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background: #151322;
+  background: #3B3486;
 }
 
 .background{
@@ -18,20 +23,17 @@ body {
   transform: translate(-50%,-50%);
   left: 50%;
   top: 50%;
-  background-color: #151322;
 }
 .background .shape{
   height: 200px;
   width: 200px;
   position: absolute;
   border-radius: 50%;
-  
-
 }
 .shape:first-child{
   background: linear-gradient(
-    #ff512f,
-    #f09819
+    #864AF9,
+      #56309c
   );
   left: -80px;
   top: -80px;
@@ -60,14 +62,13 @@ form{
   padding: 50px 35px;
 }
 form *{
-  font-family: 'Poppins',sans-serif;
   color: black;
   letter-spacing: 0.5px;
   outline: none;
   border: none;
 }
 form h3{
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 42px;
   text-align: center;
@@ -91,30 +92,28 @@ input{
   font-weight: 300;
 }
 ::placeholder{
-  color: #e5e5e5;
+  color: #fff;
 }
 button{
   margin-top: 50px;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #56309c;
   color: #080710;
   padding: 15px 0;
   font-size: 18px;
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #e5e5e5;
+  background-color: #864AF9;
 }
 .social{
 margin-top: 30px;
 display: flex;
 }
 .social div{
-background: red;
 width: 150px;
 border-radius: 3px;
 padding: 5px 10px 10px 5px;
-background-color: rgba(255,255,255,0.27);
 color: black;
 text-align: center;
 transition: 0.2s ease;
@@ -123,46 +122,39 @@ gap: 10px;
 
 }
 .social div:hover{
-background-color: rgba(255,255,255,0.47);
 transform: scale(1.1);
 }
 .social .fb{
+  
 margin-left: 25px;
 align-items: center;
 display: flex;
 }
 
 .social .go{
+  font-size: 1.5rem;
+  margin-left: 25px;
   align-items: center;
   display: flex;
-  justify-content: center;
-  width: 50%;
   }
+  .custom-shape-divider-bottom-1707852451 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
 
-  .social .fb{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    }
+.custom-shape-divider-bottom-1707852451 svg {
+    position: relative;
+    display: block;
+    width: calc(170% + 1.3px);
+    height: 140px;
+    transform: rotateY(180deg);
+}
 
-    .custom-shape-divider-bottom-1707852028 {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      line-height: 0;
-      transform: rotate(180deg);
-  }
-  
-  .custom-shape-divider-bottom-1707852028 svg {
-      position: relative;
-      display: block;
-      width: calc(141% + 1.3px);
-      height: 150px;
-  }
-  
-  .custom-shape-divider-bottom-1707852028 .shape-fill {
-      fill: #5D4C6B;
-  }
+.custom-shape-divider-bottom-1707852451 .shape-fill {
+    fill: #864AF9;
+}
