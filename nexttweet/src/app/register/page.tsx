@@ -1,16 +1,24 @@
-'use client';
+"use client";
 import { useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router'; // import Router for navigation
 import FacebookIcon from '../../assets/icons/facebook.png';
 import GoogleIcon from '../../assets/icons/google.png';
 
 export default function RegisterPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const [email, setEmail] = useState('');
+    const router = useRouter(); // initialize router
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return;
+        }
 
         const response = await fetch('/api/Auth/register', {
             method: 'POST',
@@ -33,7 +41,16 @@ export default function RegisterPage() {
         const { id, value } = event.target;
         if (id === 'username') setUsername(value);
         if (id === 'password') setPassword(value);
+        if (id === 'confirmPassword') setConfirmPassword(value);
         if (id === 'email') setEmail(value);
+    };
+
+    const handleSignInClick = () => {
+        router.push('/login'); // navigate to login page
+    };
+
+    const handleSignUpWithGoogle = () => {
+        // handle sign up with Google action
     };
 
     return (
@@ -70,17 +87,28 @@ export default function RegisterPage() {
                     onChange={handleInputChange}
                 />
 
+                <label htmlFor="confirmPassword">Confirm Password</label>
+                <input
+                    type="password"
+                    placeholder="Confirm Password"
+                    id="confirmPassword"
+                    value={confirmPassword}
+                    onChange={handleInputChange}
+                />
+
                 <button type="submit">Register</button>
+
                 <div className="social">
-                    <div className="go">
-                        <Image src={GoogleIcon} alt="Google" width={40} height={40} /> Google
-                    </div>
-                    <div className="fb">
-                        <Image src={FacebookIcon} alt="Facebook" width={40} height={40} /> Facebook
-                    </div>
+                    <button className="google-signup" onClick={handleSignUpWithGoogle}>
+                        <Image src={GoogleIcon} alt="Google" width={20} height={20} />
+                        Sign up with Google
+                    </button>
                 </div>
             </form>
+
+            <div className="signin-message">
+                Already have an account? <button onClick={handleSignInClick}>Sign in</button>
+            </div>
         </div>
     );
 }
-
