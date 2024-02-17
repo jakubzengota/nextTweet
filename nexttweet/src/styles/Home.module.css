@@ -39,7 +39,11 @@
   text-align: center;
   display: flex;
   justify-content: space-between;
-  gap: "10px"
+  gap: "10px";
+  flex-direction: row; /* Domyślnie jest 'row', zmień na 'column' */
+  align-items: center; /* Wyśrodkowanie elementów w pionie */
+  justify-content: flex-start; /* Aby logo było na samej górze */
+  gap: 480px; /* Odstęp między elementami */
 }
 
 .nav {

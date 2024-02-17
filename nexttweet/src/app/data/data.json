@@ -3,11 +3,11 @@
       {
         "id": "1",
         "user": {
-          "username": "janek123",
-          "displayName": "Jan Kowalski",
-          "avatar": "url_do_avataru_janka.jpg"
+          "username": "JanM321",
+          "displayName": "Jan Makaroński",
+          "avatar": "../assets/icons/JanMakaronski.png"
         },
-        "content": "To jest mój pierwszy post na Tweeterze!",
+        "content": "To jest mój pierwszy post na Tweeterze!!!",
         "likes": 150,
         "retweets": 25,
         "comments": 12,
@@ -16,9 +16,9 @@
       {
         "id": "2",
         "user": {
-          "username": "ewa_k",
+          "username": "Ewka",
           "displayName": "Ewa Kwiatkowska",
-          "avatar": "url_do_avataru_ewy.jpg"
+          "avatar": "import EwaAvatar from '../../assets/icons/Ewa.png"
         },
         "content": "Piękny dzień na spacer! 🌞",
         "likes": 230,
@@ -31,9 +31,9 @@
         "user": {
           "username": "tech_guru",
           "displayName": "Technologiczny Guru",
-          "avatar": "url_do_avataru_tech_guru.jpg"
+          "avatar": "../assets/icons/Technologia.png"
         },
-        "content": "Nowe technologie zmieniają świat. Jakie innowacje Was ostatnio zaskoczyły?",
+        "content": "Nowe technologie zmieniają świat. Jakie innowacje Was ostatnio zaskoczyły? Zapraszam na kurs do mnie!",
         "likes": 500,
         "retweets": 150,
         "comments": 75,
@@ -42,40 +42,40 @@
       {
         "id": "4",
         "user": {
-          "username": "tech_guru",
-          "displayName": "Technologiczny Guru",
-          "avatar": "url_do_avataru_tech_guru.jpg"
+          "username": "Fanaticcc",
+          "displayName": "Francis Korpert",
+          "avatar": "../assets/icons/Francis"
         },
-        "content": "Nowe technologie zmieniają świat. Jakie innowacje Was ostatnio zaskoczyły?",
-        "likes": 500,
-        "retweets": 150,
-        "comments": 75,
+        "content": "Have you seen the latest lol tournament?!! What do you think??",
+        "likes": 1502,
+        "retweets": 162,
+        "comments": 32,
         "timestamp": "2024-02-17T15:45:00Z"
       },
       {
         "id": "5",
         "user": {
-          "username": "tech_guru",
-          "displayName": "Technologiczny Guru",
-          "avatar": "url_do_avataru_tech_guru.jpg"
+          "username": "Macias",
+          "displayName": "Maciek Rompalski",
+          "avatar": "../assets/icons/Maciek.png"
         },
-        "content": "Nowe technologie zmieniają świat. Jakie innowacje Was ostatnio zaskoczyły?",
-        "likes": 500,
-        "retweets": 150,
-        "comments": 75,
+        "content": "Szukam ekipy do grania w minecrafta, zgłaszać się!",
+        "likes": 15,
+        "retweets": 2,
+        "comments": 2,
         "timestamp": "2024-02-17T15:45:00Z"
       },
       {
         "id": "6",
         "user": {
-          "username": "tech_guru",
-          "displayName": "Technologiczny Guru",
-          "avatar": "url_do_avataru_tech_guru.jpg"
+          "username": "Sniper666",
+          "displayName": "Karol Orłowski",
+          "avatar": "../assets/icons/przeł.png"
         },
-        "content": "Nowe technologie zmieniają świat. Jakie innowacje Was ostatnio zaskoczyły?",
-        "likes": 500,
-        "retweets": 150,
-        "comments": 75,
+        "content": "Co uważacie o ostatnim wystąpieniu Joe Bidena?",
+        "likes": 259,
+        "retweets": 56,
+        "comments": 65,
         "timestamp": "2024-02-17T15:45:00Z"
       }
     ]

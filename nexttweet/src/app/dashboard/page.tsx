@@ -6,12 +6,18 @@ import data from "../data/data.json";
 import userSuggestions from "../data/sugestedUsers.json"
 import logo from "../../assets/icons/nt.png"
 import Image from 'next/image';
+// import JanAvatar from '../../assets/icons/JanMakaronski.png';
+import Ewka from '../../assets/icons/Ewa.png.png';
+// import JanAvatar from '../../assets/icons/Technologia.png.png';
+// import JanAvatar from '../../assets/icons/Francis.png.png';
+// import JanAvatar from '../../assets/icons/maciek.png.png';
+// import JanAvatar from '../../assets/icons/orzeł.png.png';
 
 export default function Dashboard() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-      <Image src={logo} alt="Google" width={100} height={100} />
+      <Image src={logo} alt="Google" width={160} height={100} />
         <h1>NextTweet</h1>
         <h1></h1>
       </header>
