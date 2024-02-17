@@ -71,10 +71,10 @@ export default function Page() {
                     <button type="submit">Log In</button>
                     <div className="social">
                         <div className="go">
-                            <Image src={GoogleIcon} alt="Google" width={40} height={40} /> Google
+                            <Image src={GoogleIcon} alt="Google" width={40} height={40} />
                         </div>
                         <div className="fb">
-                            <Image src={FacebookIcon} alt="Facebook" width={40} height={40} /> Facebook
+                            <Image src={FacebookIcon} alt="Facebook" width={40} height={40} /> 
                         </div>
                     </div>
                 </form>

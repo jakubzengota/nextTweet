@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Quicksand:wght@300..700&family=Sixtyfour&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Bungee Hairline", sans-serif;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -95,7 +95,7 @@ input{
   color: #fff;
 }
 button{
-  margin-top: 50px;
+  margin-top: 25px;
   width: 100%;
   background-color: #56309c;
   color: #080710;
@@ -134,7 +134,8 @@ display: flex;
 
 .social .go{
   font-size: 1.5rem;
-  margin-left: 25px;
+  align-items: center;
+  justify-content: center;
   align-items: center;
   display: flex;
   }
@@ -246,7 +247,6 @@ form h6{
 }
 
 .buttonRegister{
-  margin-top: 50px;
   width: 100%;
   background-color: #56309c;
   color: #080710;

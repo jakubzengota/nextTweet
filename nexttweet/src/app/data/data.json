@@ -1,0 +1,82 @@
+{
+    "posts": [
+      {
+        "id": "1",
+        "user": {
+          "username": "janek123",
+          "displayName": "Jan Kowalski",
+          "avatar": "url_do_avataru_janka.jpg"
+        },
+        "content": "To jest mój pierwszy post na Tweeterze!",
+        "likes": 150,
+        "retweets": 25,
+        "comments": 12,
+        "timestamp": "2024-02-17T10:00:00Z"
+      },
+      {
+        "id": "2",
+        "user": {
+          "username": "ewa_k",
+          "displayName": "Ewa Kwiatkowska",
+          "avatar": "url_do_avataru_ewy.jpg"
+        },
+        "content": "Piękny dzień na spacer! 🌞",
+        "likes": 230,
+        "retweets": 40,
+        "comments": 18,
+        "timestamp": "2024-02-17T12:30:00Z"
+      },
+      {
+        "id": "3",
+        "user": {
+          "username": "tech_guru",
+          "displayName": "Technologiczny Guru",
+          "avatar": "url_do_avataru_tech_guru.jpg"
+        },
+        "content": "Nowe technologie zmieniają świat. Jakie innowacje Was ostatnio zaskoczyły?",
+        "likes": 500,
+        "retweets": 150,
+        "comments": 75,
+        "timestamp": "2024-02-17T15:45:00Z"
+      },
+      {
+        "id": "4",
+        "user": {
+          "username": "tech_guru",
+          "displayName": "Technologiczny Guru",
+          "avatar": "url_do_avataru_tech_guru.jpg"
+        },
+        "content": "Nowe technologie zmieniają świat. Jakie innowacje Was ostatnio zaskoczyły?",
+        "likes": 500,
+        "retweets": 150,
+        "comments": 75,
+        "timestamp": "2024-02-17T15:45:00Z"
+      },
+      {
+        "id": "5",
+        "user": {
+          "username": "tech_guru",
+          "displayName": "Technologiczny Guru",
+          "avatar": "url_do_avataru_tech_guru.jpg"
+        },
+        "content": "Nowe technologie zmieniają świat. Jakie innowacje Was ostatnio zaskoczyły?",
+        "likes": 500,
+        "retweets": 150,
+        "comments": 75,
+        "timestamp": "2024-02-17T15:45:00Z"
+      },
+      {
+        "id": "6",
+        "user": {
+          "username": "tech_guru",
+          "displayName": "Technologiczny Guru",
+          "avatar": "url_do_avataru_tech_guru.jpg"
+        },
+        "content": "Nowe technologie zmieniają świat. Jakie innowacje Was ostatnio zaskoczyły?",
+        "likes": 500,
+        "retweets": 150,
+        "comments": 75,
+        "timestamp": "2024-02-17T15:45:00Z"
+      }
+    ]
+  }

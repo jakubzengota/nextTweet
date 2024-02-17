@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Quicksand:wght@300..700&family=Sixtyfour&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+
+
+.mainContainer {
+  display: flex;
+  flex-grow: 1; /* Pozwala kontenerowi rosnąć i wypełniać dostępną przestrzeń */
+  min-height: 100vh; /* Ustawia minimalną wysokość na 120% wysokości okna przeglądarki, co umożliwia przewijanie */
+  overflow-x: hidden; /* Ukrywa poziome paski przewijania */
+  width: 100%;
+  flex-direction: row;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.container {
+  padding-top: 70px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3B3486
+}
+
+.header {
+  height: 70px;
+  position: fixed;
+  top: 0;
+  padding: 1rem;
+  width: 100%;
+  background-color: #864AF9;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: "10px"
+}
+
+.nav {
+  
+  background: #864AF9;
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.navLink {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navLink:hover {
+  background-color: #2a2561;
+}
+
+.leftSidebar, .rightSidebar {
+  flex: 1;
+  padding: 40px;
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.leftSidebar ul li, .rightSidebar ul li {
+  margin-bottom: 50px; /* Dodaje margines na dole każdego elementu listy, zwiększając odstęp */
+  /* Alternatywnie, możesz użyć paddingu zamiast marginesu, jeśli wolisz */
+  /* padding-bottom: 20px; */
+  list-style: none;
+}
+
+.rightSidebar {
+  border-right: none;
+}
+
+.main {
+  padding: 20px;
+  background-color: #2a2561;
+}
+
+.tweetBox {
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px
+}
+
+.tweetBox input {
+  width: calc(100% - 260px); /* Odejmujemy szerokość buttona i trochę więcej, aby uwzględnić potencjalne marginesy/paddingi */
+  margin-right: 10px; /* Opcjonalnie, dodajemy margines, aby button nie przylegał bezpośrednio do inputa */
+  border-radius: 10px;
+}
+
+.tweetBox button {
+  background-color: #864AF9;
+  color: black;
+  border: none;
+  width: 250px;
+  cursor: pointer;
+  height: 50px;
+
+}
+.tweetBox input, .tweetBox button {
+  margin: 0;
+  padding: 8px; 
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+}
+
+.post {
+  background-color: #864AF9;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+}
+.postHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.postAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.postUser {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.postContent {
+  margin-bottom: 20px;
+}
+
+.postTimestamp {
+  color: white;
+  font-size: 0.9em;
+}
+
+.postActions {
+  display: flex;
+ 
+}
+
+.actionButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionText {
+  margin-left: 5px;
+}
+
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerContent {
+  margin-bottom: 10px;
+}
+
+.footerLinks a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.footerLinks a:hover {
+  color: #0366d6;
+}
+
+.socialMedia{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialMedia a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+  display: flex;
+}
+
+.socialMedia a:hover {
+  color: #0a8ecd;
+}
+
+.footer img {
+  margin-left: 0.5rem;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* pasek przewijania */
+
+.customScrollbar {
+  overflow-y: auto; /* Włącza przewijanie pionowe, jeśli zawartość przekracza wysokość elementu */
+}
+
+.customScrollbar::-webkit-scrollbar {
+  width: 8px; /* Szerokość paska przewijania */
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Kolor tła ścieżki paska przewijania */
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+  background: #888; /* Kolor "kciuka" paska przewijania */
+  border-radius: 4px; /* Zaokrąglenie krawędzi kciuka */
+}
+
+.customScrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Kolor kciuka paska przewijania przy najechaniu */
+}
