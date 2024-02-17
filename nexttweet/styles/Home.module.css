@@ -1,0 +1,158 @@
+
+.mainContainer {
+  display: flex;
+  flex-grow: 1; /* Pozwala kontenerowi rosnąć i wypełniać dostępną przestrzeń */
+  min-height: 120vh; /* Ustawia minimalną wysokość na 120% wysokości okna przeglądarki, co umożliwia przewijanie */
+  overflow-x: hidden; /* Ukrywa poziome paski przewijania */
+  width: 100%;
+  flex-direction: row;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3B3486
+}
+
+.header {
+  padding: 1rem;
+  width: 100%;
+  background-color: #864AF9;
+  color: black;
+  text-align: center;
+}
+
+.nav {
+  background: #864AF9;
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.navLink {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navLink:hover {
+  background-color: #1991db;
+}
+
+.leftSidebar, .rightSidebar {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #864AF9;
+}
+
+.rightSidebar {
+  border-right: none;
+  border-left: 1px solid #864AF9;
+}
+
+.main {
+  flex: 6;
+  padding: 20px;
+}
+
+.tweetBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.tweetBox textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.tweetBox button {
+  background-color: #864AF9;
+  color: black;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.feed {
+  width: 100%;
+}
+
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #864AF9;
+}
+
+.footerContent {
+  margin-bottom: 10px;
+}
+
+.footerLinks a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.footerLinks a:hover {
+  color: #0366d6;
+}
+
+.socialMedia a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.socialMedia a:hover {
+  color: #0a8ecd;
+}
+
+.footer img {
+  margin-left: 0.5rem;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* pasek przewijania */
+
+.customScrollbar {
+  overflow-y: auto; /* Włącza przewijanie pionowe, jeśli zawartość przekracza wysokość elementu */
+}
+
+.customScrollbar::-webkit-scrollbar {
+  width: 8px; /* Szerokość paska przewijania */
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Kolor tła ścieżki paska przewijania */
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+  background: #888; /* Kolor "kciuka" paska przewijania */
+  border-radius: 4px; /* Zaokrąglenie krawędzi kciuka */
+}
+
+.customScrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Kolor kciuka paska przewijania przy najechaniu */
+}
