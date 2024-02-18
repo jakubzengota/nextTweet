@@ -5,7 +5,7 @@
         "user": {
           "username": "JanM321",
           "displayName": "Jan Makaroński",
-          "avatar": "../../assets/icons/JanMakaronski.png"
+          "avatar": "/assets/icons/JanMakaronksi.png"
         },
         "content": "To jest mój pierwszy post na Tweeterze!!!",
         "likes": 150,
@@ -18,7 +18,7 @@
         "user": {
           "username": "Ewka",
           "displayName": "Ewa Kwiatkowska",
-          "avatar": "import EwaAvatar from '../../assets/icons/Ewa.png"
+          "avatar": "/assets/icons/Ewa.png"
         },
         "content": "Piękny dzień na spacer! 🌞",
         "likes": 230,
@@ -31,7 +31,7 @@
         "user": {
           "username": "tech_guru",
           "displayName": "Technologiczny Guru",
-          "avatar": "../assets/icons/Technologia.png"
+          "avatar": "/assets/icons/Technologia.png"
         },
         "content": "Nowe technologie zmieniają świat. Jakie innowacje Was ostatnio zaskoczyły? Zapraszam na kurs do mnie!",
         "likes": 500,
@@ -44,7 +44,7 @@
         "user": {
           "username": "Fanaticcc",
           "displayName": "Francis Korpert",
-          "avatar": "../assets/icons/Francis"
+          "avatar": "/assets/icons/Francis.png"
         },
         "content": "Have you seen the latest lol tournament?!! What do you think??",
         "likes": 1502,
@@ -57,7 +57,7 @@
         "user": {
           "username": "Macias",
           "displayName": "Maciek Rompalski",
-          "avatar": "../assets/icons/Maciek.png"
+          "avatar": "/assets/icons/Maciek.png"
         },
         "content": "Szukam ekipy do grania w minecrafta, zgłaszać się!",
         "likes": 15,
@@ -70,7 +70,7 @@
         "user": {
           "username": "Sniper666",
           "displayName": "Karol Orłowski",
-          "avatar": "../assets/icons/przeł.png"
+          "avatar": "/assets/icons/orzeł.png"
         },
         "content": "Co uważacie o ostatnim wystąpieniu Joe Bidena?",
         "likes": 259,

@@ -76,6 +76,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  
 }
 
 .leftSidebar ul li, .rightSidebar ul li {
@@ -88,6 +89,8 @@
 .rightSidebar {
   border-right: none;
 }
+
+
 
 .main {
   padding: 20px;
@@ -140,15 +143,16 @@
   padding: 20px;
 }
 .postHeader {
-  display: flex;
-  align-items: center;
   margin-bottom: 20px;
+  justify-content: space-between;
+  display: flex;
+  
 }
 
 .postAvatar {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 20%;
   margin-right: 10px;
 }
 
@@ -157,13 +161,16 @@
   margin-right: 10px;
 }
 
-.postContent {
-  margin-bottom: 20px;
-}
+
 
 .postTimestamp {
   color: white;
   font-size: 0.9em;
+
+}
+
+.postContent{
+  padding-top: 10px;
 }
 
 .postActions {

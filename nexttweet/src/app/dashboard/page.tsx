@@ -3,21 +3,15 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
 import data from "../data/data.json";
-import userSuggestions from "../data/sugestedUsers.json"
-import logo from "../../assets/icons/nt.png"
-import Image from 'next/image';
-// import JanAvatar from '../../assets/icons/JanMakaronski.png';
-import Ewka from '../../assets/icons/Ewa.png.png';
-// import JanAvatar from '../../assets/icons/Technologia.png.png';
-// import JanAvatar from '../../assets/icons/Francis.png.png';
-// import JanAvatar from '../../assets/icons/maciek.png.png';
-// import JanAvatar from '../../assets/icons/orzeł.png.png';
+import userSuggestions from "../data/sugestedUsers.json";
+import logo from "../../assets/icons/nt.png";
+import Image from "next/image";
 
 export default function Dashboard() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-      <Image src={logo} alt="Google" width={160} height={100} />
+        <Image src={logo} alt="Google" width={160} height={100} />
         <h1>NextTweet</h1>
         <h1></h1>
       </header>
@@ -58,13 +52,18 @@ export default function Dashboard() {
           <div className="feed">
             {data.posts.map((tweet) => (
               <div key={tweet.id} className={styles.post}>
-                <div className="postHeader">
-                  <img
-                    src={tweet.user.avatar}
-                    alt="avatar"
-                    className={styles.postAvatar}
-                  />
-                  <span className={styles.postUser}>{tweet.user.displayName}</span>
+                <div className="postHeader" style={{display: "flex", justifyContent: "space-between"}}>
+                  <div style={{display: "flex"}}>
+                    <img
+                      src={tweet.user.avatar}
+                      alt="avatar"
+                      className={styles.postAvatar}
+                    />
+                    <span className={styles.postUser}>
+                      {tweet.user.displayName}
+                    </span>
+                  </div>
+                  
                   <span className={styles.postTimestamp}>
                     {new Date(tweet.timestamp).toLocaleString()}
                   </span>
@@ -75,10 +74,12 @@ export default function Dashboard() {
                     ❤️ <span className={styles.actionText}>{tweet.likes}</span>
                   </button>
                   <button className={styles.actionButton}>
-                    🔁 <span className={styles.actionText}>{tweet.retweets}</span>
+                    🔁{" "}
+                    <span className={styles.actionText}>{tweet.retweets}</span>
                   </button>
                   <button className={styles.actionButton}>
-                    💬 <span className={styles.actionText}>{tweet.comments}</span>
+                    💬{" "}
+                    <span className={styles.actionText}>{tweet.comments}</span>
                   </button>
                 </div>
               </div>
@@ -88,26 +89,44 @@ export default function Dashboard() {
 
         {/* Prawa kolumna z informacjami */}
         <aside className={styles.rightSidebar}>
-  <h3>Sugestie dla Ciebie</h3>
-  <ul>
-    {userSuggestions.userSuggestions.map(user => (
-      <li key={user.id}>
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
-          <img src={user.avatarUrl} alt="Avatar" style={{ width: '30px', height: '30px', borderRadius: '50%', marginRight: '10px' }} />
-          <div>
-            <div style={{ fontWeight: 'bold' }}>{user.displayName}</div>
-            <div style={{ fontSize: 'small' }}>{user.bio}</div>
-          </div>
-        </div>
-      </li>
-    ))}
-  </ul>
-</aside>
+          <h2>Sugestie dla Ciebie</h2>
+          <ul>
+            {userSuggestions.userSuggestions.map((user) => (
+              <li key={user.id}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "10px",
+                    background: "#864AF9",
+                    padding: "10px 30px 10px 30px",
+                    borderRadius: "20px"
+                  }}
+                >
+                  <img
+                    src={user.avatarUrl}
+                    alt="Avatar"
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      borderRadius: "50%",
+                      marginRight: "10px",
+                    }}
+                  />
+                  <div>
+                    <div style={{ fontWeight: "bold" }}>{user.displayName}</div>
+                    <div style={{ fontSize: "small" }}>{user.bio}</div>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </aside>
       </div>
 
       <footer className={styles.footer}>
         {/* Rozbudowany footer */}
-       
+
         <div className={styles.footerLinks}>
           <Link href="/polityka-prywatnosci">Polityka prywatności</Link>
           <Link href="/kontakt">Kontakt</Link>
@@ -137,7 +156,7 @@ export default function Dashboard() {
           >
             Instagram
           </a>
-        </div> 
+        </div>
         <div className={styles.footerContent}>
           © 2024 Klon Twittera. Wszelkie prawa zastrzeżone.
         </div>
