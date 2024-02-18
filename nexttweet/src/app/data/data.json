@@ -5,7 +5,7 @@
         "user": {
           "username": "JanM321",
           "displayName": "Jan Makaroński",
-          "avatar": "../assets/icons/JanMakaronski.png"
+          "avatar": "../../assets/icons/JanMakaronski.png"
         },
         "content": "To jest mój pierwszy post na Tweeterze!!!",
         "likes": 150,
