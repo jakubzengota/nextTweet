@@ -1,6 +1,8 @@
+"use client";
 import bcrypt from 'bcrypt';
 import pool from '../../../../init-db';
-import passwordValidator from 'password-validator';
+import PasswordValidator from 'password-validator';
+// npm install password-validator
 
 //schemat walidacji hasła
 const passwordSchema = new PasswordValidator();

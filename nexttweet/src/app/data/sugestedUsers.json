@@ -1,0 +1,39 @@
+{
+    "userSuggestions": [
+      {
+        "id": "1",
+        "username": "przyrodnik88",
+        "displayName": "Marek Kowalski",
+        "avatarUrl": "/assets/icons/marek.png",
+        "bio": "Pasjonat przyrody i wszystkiego co zielone. 🌿"
+      },
+      {
+        "id": "2",
+        "username": "tech_guru",
+        "displayName": "Anna Nowak",
+        "avatarUrl": "/assets/icons/anna.png",
+        "bio": "Tech enthusiast, programistka i blogerka."
+      },
+      {
+        "id": "3",
+        "username": "sztuka_miasta",
+        "displayName": "Jakub Szymański",
+        "avatarUrl": "/assets/icons/jakub.png",
+        "bio": "Odkrywca miejskiej sztuki i street artu. 🎨"
+      },
+      {
+        "id": "4",
+        "username": "fitness_queen",
+        "displayName": "Ewa Maj",
+        "avatarUrl": "/assets/icons/e.png",
+        "bio": "Miłośniczka zdrowego stylu życia i fitnessu. 💪"
+      },
+      {
+        "id": "5",
+        "username": "ksiazkoholik",
+        "displayName": "Tomasz Dąbrowski",
+        "avatarUrl": "/assets/icons/tomasz.png",
+        "bio": "Pożeracz książek i kawosz. 📚☕"
+      }
+    ]
+  }

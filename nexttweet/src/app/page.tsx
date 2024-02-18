@@ -1,28 +1,32 @@
+"use client";
+import Head from 'next/head';
 import Link from 'next/link';
-import LandingPage from './components/Template/LandingPage';
+import styles from '../../styles/Home.module.css';
 
-
-export default function Page() {
+export default function Home() {
   return (
-    // <main className="flex min-h-screen flex-col p-6">
-    //   <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
-    //   </div>
-    //   <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
-    //     <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-          
-    //       <div
-    //         className="h-0 w-0 border-b-[30px] border-l-[20px] border-r-[20px] border-b-black border-l-transparent border-r-transparent"
-    //       />
-          
-    //       <Link
-    //         href="/login"
-    //         className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
-    //       >
-    //         <span>Log in</span> 
-    //       </Link>
-    //     </div>
-    //   </div>
-    // </main>
-    <LandingPage/>
+      <div className='homeBg'  >
+        <h1 style={{fontSize: "150px"}}>NextTweet</h1>
+        <div style={{gap: "20px", display: "flex"}}>
+          <Link
+              href="/login"
+            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+          >
+            <span style={{color: "white"}}>Log in</span> 
+          </Link>
+          <Link
+              href="/register"
+            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+          >
+            <span style={{color: "white"}}>Register</span> 
+          </Link>
+        </div>
+        
+      </div>
   );
 }
+
+
+
+
+
