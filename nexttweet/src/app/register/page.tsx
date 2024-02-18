@@ -70,6 +70,7 @@ export default function RegisterPage() {
                 <h3>REGISTER HERE</h3>
                 <label htmlFor="username">Username</label>
                 <input
+                className='inputImportant'
                     type="text"
                     placeholder="Username"
                     id="username"

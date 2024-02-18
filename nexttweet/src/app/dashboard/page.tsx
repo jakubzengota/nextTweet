@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "../../styles/Home.module.css";
 import data from "../data/data.json";
 import userSuggestions from "../data/sugestedUsers.json";
-import logo from "../../assets/icons/nt.png";
+import logo from "../../assets/ntlogo.png";
 import Image from "next/image";
 
 export default function Dashboard() {
@@ -46,8 +46,6 @@ export default function Dashboard() {
 
         <main className={styles.main}>
           <div className={styles.tweetBox}>
-            <input></input>
-            <button>Tweetuj</button>
           </div>
           <div className="feed">
             {data.posts.map((tweet) => (
@@ -98,9 +96,9 @@ export default function Dashboard() {
                     display: "flex",
                     alignItems: "center",
                     marginBottom: "10px",
-                    background: "#864AF9",
+                    background: "#1f1f1f",
                     padding: "10px 30px 10px 30px",
-                    borderRadius: "20px"
+                    borderRadius: "20px",
                   }}
                 >
                   <img
@@ -115,7 +113,7 @@ export default function Dashboard() {
                   />
                   <div>
                     <div style={{ fontWeight: "bold" }}>{user.displayName}</div>
-                    <div style={{ fontSize: "small" }}>{user.bio}</div>
+                    <div style={{ fontSize: "small", color: "white" }}>{user.bio}</div>
                   </div>
                 </div>
               </li>

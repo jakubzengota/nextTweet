@@ -3,16 +3,20 @@ import { useState } from 'react';
 import Image from 'next/image';
 import FacebookIcon from '../../assets/icons/facebook.png';
 import GoogleIcon from '../../assets/icons/google.png';
+import { useRouter } from 'next/router';
 
 export default function Page() {
     // State variables for username and password
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = async (event: any) => {
-        event.preventDefault(); // Prevent the default form submission behavior
 
-        // Now, use state variables `username` and `password` directly
+
+
+
+    const handleSubmit = async (event: any) => {
+        event.preventDefault(); // Zapobiegaj domyślnej akcji formularza
+
         const response = await fetch('/api/Auth/login', {
             method: 'POST',
             headers: {
@@ -25,12 +29,11 @@ export default function Page() {
 
         if (response.ok) {
             alert('Zalogowano pomyślnie: ' + data.message);
-            // Redirect the user or perform another action here
+            // Przekieruj użytkownika do /dashboard
         } else {
             alert('Błąd logowania: ' + data.message);
         }
     };
-
     // Update state variables on input change
     const handleInputChange = (event: any) => {
         const { id, value } = event.target;

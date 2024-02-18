@@ -25,7 +25,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #3B3486
+  background-color: black;
 }
 
 .header {
@@ -34,8 +34,8 @@
   top: 0;
   padding: 1rem;
   width: 100%;
-  background-color: #864AF9;
-  color: black;
+  background-color: #1f1f1f;
+  color: white;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -48,7 +48,7 @@
 
 .nav {
   
-  background: #864AF9;
+  background: white;
   width: 100%;
   padding: 1rem 0;
   display: flex;
@@ -57,11 +57,12 @@
 }
 
 .navLink {
-  color: black;
+  color: white;
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s;
+  text-transform: uppercase;
 }
 
 .navLink:hover {
@@ -88,13 +89,14 @@
 
 .rightSidebar {
   border-right: none;
+  color: white
 }
 
 
 
 .main {
   padding: 20px;
-  background-color: #2a2561;
+  background-color: black;
 }
 
 .tweetBox {
@@ -114,7 +116,7 @@
 }
 
 .tweetBox button {
-  background-color: #864AF9;
+  background-color: #1f1f1f;
   color: black;
   border: none;
   width: 250px;
@@ -136,7 +138,7 @@
 }
 
 .post {
-  background-color: #864AF9;
+  background-color: #1f1f1f;
   margin-bottom: 20px;
   border-radius: 10px;
   width: 100%;
@@ -159,6 +161,7 @@
 .postUser {
   font-weight: bold;
   margin-right: 10px;
+  color: white;
 }
 
 
@@ -171,6 +174,7 @@
 
 .postContent{
   padding-top: 10px;
+  color: white;
 }
 
 .postActions {
@@ -197,16 +201,17 @@
   width: 100%;
   padding: 20px;
   text-align: center;
+  font-size: 12px;
 }
 
 .footerContent {
-  margin-bottom: 10px;
+  color: white;
+  padding-top: 10px;
 }
 
 .footerLinks a {
-  margin: 0 10px;
   text-decoration: none;
-  color: black;
+  color: white;
   transition: color 0.3s;
 }
 
@@ -216,16 +221,18 @@
 
 .socialMedia{
   display: flex;
+  gap:20px;
   align-items: center;
   justify-content: center;
 }
 
 .socialMedia a {
-  margin: 0 10px;
+  margin: 0 50px;
   text-decoration: none;
-  color: black;
+  color: white;
   transition: color 0.3s;
   display: flex;
+  padding-top: 10px;
 }
 
 .socialMedia a:hover {
@@ -240,6 +247,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
 }
 
 
