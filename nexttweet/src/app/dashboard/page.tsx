@@ -6,8 +6,15 @@ import data from "../data/data.json";
 import userSuggestions from "../data/sugestedUsers.json";
 import logo from "../../assets/icons/nt.png";
 import Image from "next/image";
+import { useState } from 'react';
 
 export default function Dashboard() {
+  const [isUserProfileVisible, setUserProfileVisible] = useState(false);
+
+  const toggleUserProfile = () => {
+    setUserProfileVisible(!isUserProfileVisible);
+  };
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -35,14 +42,35 @@ export default function Dashboard() {
                 Wiadomości
               </Link>
             </li>
+            <li onClick={toggleUserProfile} className={styles.navLink}>
+              Profil
+            </li>
             <li>
               {" "}
               <Link href="/ustawienia" className={styles.navLink}>
                 Ustawienia
               </Link>
             </li>
+            <li>
+              <Link href="/wiecej" className={styles.navLink}>
+                Więcej
+              </Link>
+            </li>
           </ul>
         </aside>
+
+        {isUserProfileVisible && (
+          <>
+            <div className="overlay" onClick={toggleUserProfile}></div>
+            <div className={styles.userProfileModal}>
+              {/* Informacje o użytkowniku, np.: */}
+              <p>Imię użytkownika: Jan Kowalski</p>
+              <p>Email: jan@example.com</p>
+              {/* Więcej informacji o użytkowniku */}
+              <button onClick={toggleUserProfile}>Zamknij</button>
+            </div>
+          </>
+        )}
 
         <main className={styles.main}>
           <div className={styles.tweetBox}>
@@ -52,8 +80,8 @@ export default function Dashboard() {
           <div className="feed">
             {data.posts.map((tweet) => (
               <div key={tweet.id} className={styles.post}>
-                <div className="postHeader" style={{display: "flex", justifyContent: "space-between"}}>
-                  <div style={{display: "flex"}}>
+                <div className="postHeader" style={{ display: "flex", justifyContent: "space-between" }}>
+                  <div style={{ display: "flex" }}>
                     <img
                       src={tweet.user.avatar}
                       alt="avatar"
@@ -63,7 +91,7 @@ export default function Dashboard() {
                       {tweet.user.displayName}
                     </span>
                   </div>
-                  
+
                   <span className={styles.postTimestamp}>
                     {new Date(tweet.timestamp).toLocaleString()}
                   </span>
@@ -164,3 +192,4 @@ export default function Dashboard() {
     </div>
   );
 }
+
