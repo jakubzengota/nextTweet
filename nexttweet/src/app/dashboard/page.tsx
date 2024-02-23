@@ -8,19 +8,39 @@ import logo from "../../assets/ntlogo.png";
 import Image from "next/image";
 import { useState } from 'react';
 
+
+
 export default function Dashboard() {
   const [isUserProfileVisible, setUserProfileVisible] = useState(false);
+
 
   const toggleUserProfile = () => {
     setUserProfileVisible(!isUserProfileVisible);
   };
+
+  const logout = async () => {
+    localStorage.removeItem('yourSessionTokenKey');
+
+    await fetch('/api/logout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    
+    window.location.href = '/';
+  };
+
 
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <Image src={logo} alt="Google" width={160} height={100} />
         <h1>NextTweet</h1>
-        <h1></h1>
+        {/* Dodajemy przycisk wylogowania po prawej stronie */}
+        <button onClick={logout} className={styles.logoutButton}>Wyloguj</button>
+        {/* <Image src="/door.png" alt="Wyloguj" width={30} height={30}/> */}
+
       </header>
 
       <div className={styles.mainContainer}>

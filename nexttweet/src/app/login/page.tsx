@@ -29,8 +29,9 @@ export default function Page() {
         const data = await response.json();
 
         if (response.ok) {
-            alert('Zalogowano pomyślnie: ' + data.message);
+            // alert('Zalogowano pomyślnie: ' + data.message);
             // Przekieruj użytkownika do /dashboard
+            window.location.href = '/dashboard';
         } else {
             alert('Błąd logowania: ' + data.message);
         }
