@@ -19,9 +19,9 @@ export default function Dashboard() {
   };
 
   const logout = async () => {
-    localStorage.removeItem('yourSessionTokenKey');
+    // localStorage.removeItem('yourSessionTokenKey');
 
-    await fetch('/api/logout', {
+    await fetch('/api/Auth/logout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
