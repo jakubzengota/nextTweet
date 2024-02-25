@@ -1,5 +1,5 @@
 import { Fab, Action } from "react-tiny-fab";
-import "react-tiny-fab/dist/styles.css";
+import { FaSquareGithub  } from "react-icons/fa6";
 import Image from 'next/image';
 
 interface IData{
@@ -8,41 +8,40 @@ interface IData{
     displayName?: string;
     bio?: string;
     githubUrl?: string;
-    linkedinUrl?: string;
 }
 
-interface FloatingActionButtonProps {
-    icon: JSX.Element;
+interface IFabGitHub{
     data: IData[];
-    iconAlt?: JSX.Element;
 }
 
-
-const FloatingActionButton = ({ icon, data }: FloatingActionButtonProps) => {
-    return (
+const FabGitHub = ({data}: IFabGitHub) =>{
+    console.log("data:",data)
+    return(
         <Fab
-            icon={icon}
+            icon={<FaSquareGithub/>}
             alwaysShowTitle={true}
             onClick={() => alert("Clicked")}
+            mainButtonStyles={{position:"absolute"}}
+
         >
             {data.map((item, index) => (
                 <Action
                     key={index}
                     text={item.displayName}
-                    onClick={() => window.open(item.linkedinUrl || item.githubUrl || "", "_blank")}
+                    onClick={() => window.open(item.githubUrl, "_blank")}
                 >
-                    {item?.avatarUrl && (
+                    {item.avatarUrl && (
                         <Image
                             src={item?.avatarUrl}
                             width={50}
                             height={50}
                             alt={item.displayName || "Picture"}
+                            title={item.bio}
                         />
                     )}
                 </Action>
             ))}
         </Fab>
-    );
-};
-
-export default FloatingActionButton;
+    )
+}
+export default FabGitHub;
