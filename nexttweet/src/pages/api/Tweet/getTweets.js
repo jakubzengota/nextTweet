@@ -1,35 +1,28 @@
-const express = require('express');
 const { Pool } = require('pg');
-const app = express();
-const port = 3000;
 
-// Konfiguracja połączenia z bazą danych
 const pool = new Pool({
-    connectionString: process.env.POSTGRES_URL,
-  });
-  pool.connect()
-    .then(() => console.log('Połączono z bazą danych'))
-    .catch(err => console.error('Błąd połączenia z bazą danych', err));
-  
-app.use(express.json());
+  connectionString: process.env.POSTGRES_URL,
+});
 
-// Endpoint do pobierania informacji o userze i jego tweetach oraz wszystkich tweetach
-app.get('/user/:userId', async (req, res) => {
-  try {
-    // Pobranie wszystkich tweetów
-    const allTweetsQuery = await pool.query('SELECT * FROM tweets');
-    const allTweets = allTweetsQuery.rows;
+// Funkcja asynchroniczna obsługująca żądanie GET
+export default async (req, res) => {
+  if (req.method === 'GET') {
+    try {
+      // Pobranie wszystkich tweetów
+      const allTweetsQuery = await pool.query('SELECT * FROM tweets ORDER BY created_at DESC');
+      const allTweets = allTweetsQuery.rows;
 
-    // Zwrócenie danych
-    res.json({
-      allTweets: allTweets,
-    });
-  } catch (error) {
-    console.error('Error executing query', error.stack);
-    res.status(500).send('Server error');
+      // Zwrócenie danych
+      res.status(200).json({
+        allTweets,
+      });
+    } catch (error) {
+      console.error('Error executing query', error.stack);
+      res.status(500).send('Server error');
+    }
+  } else {
+    // Odpowiedź dla innych metod niż GET
+    res.setHeader('Allow', ['GET']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+};

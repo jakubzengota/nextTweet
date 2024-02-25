@@ -1,36 +1,34 @@
-const express = require('express');
 const { Pool } = require('pg');
-const app = express();
-const port = 3000;
 
 const pool = new Pool({
-    connectionString: process.env.POSTGRES_URL,
-  });
-  pool.connect()
-    .then(() => console.log('Połączono z bazą danych'))
-    .catch(err => console.error('Błąd połączenia z bazą danych', err));
-  
-app.use(express.json());
+  connectionString: process.env.POSTGRES_URL,
+});
 
-// Endpoint do pobierania informacji o userze i jego tweetach oraz wszystkich tweetach
-app.get('/user/:userId', async (req, res) => {
-  try {
-    const userId = parseInt(req.params.userId);
+export default async (req, res) => {
+  if (req.method === 'GET') {
+    try {
+      const userId = parseInt(req.query.userId); // Użycie req.query dla parametrów zapytania zamiast req.params
 
-    // Pobranie tweetów użytkownika
-    const userTweetsQuery = await pool.query('SELECT * FROM tweets WHERE user_id = $1', [userId]);
-    const userTweets = userTweetsQuery.rows;
+      // Pobranie tweetów użytkownika
+      const userTweetsQuery = await pool.query('SELECT * FROM tweets WHERE user_id = $1 ORDER BY created_at DESC', [userId]);
+      const userTweets = userTweetsQuery.rows;
 
-    // Zwrócenie danych
-    res.json({
-      userTweets: userTweets,
-    });
-  } catch (error) {
-    console.error('Error executing query', error.stack);
-    res.status(500).send('Server error');
+      if (userTweets.length === 0) {
+        return res.status(404).json({ message: "No tweets found for this user." });
+      }
+
+      // Zwrócenie danych
+      res.status(200).json({
+        userTweets,
+      });
+    } catch (error) {
+      console.error('Error executing query', error.stack);
+      res.status(500).send('Server error');
+    }
+  } else {
+    // Odpowiedź dla innych metod niż GET
+    res.setHeader('Allow', ['GET']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
-});
+};
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});

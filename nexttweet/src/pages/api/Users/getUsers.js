@@ -1,36 +1,36 @@
-const express = require('express');
 const { Pool } = require('pg');
-const app = express();
-const port = 3000;
 
-// Konfiguracja połączenia z bazą danych
 const pool = new Pool({
   connectionString: process.env.POSTGRES_URL,
 });
-pool.connect()
-  .then(() => console.log('Połączono z bazą danych'))
-  .catch(err => console.error('Błąd połączenia z bazą danych', err));
 
-app.use(express.json());
+export default async (req, res) => {
+  if (req.method === 'GET') {
+    try {
+      const userId = parseInt(req.query.userId);
+      if (isNaN(userId)) {
+        return res.status(400).send('Invalid user ID.');
+      }
 
-// Endpoint do pobierania informacji o userze i jego tweetach oraz wszystkich tweetach
-app.get('/user/:userId', async (req, res) => {
-  try {
-    const userId = parseInt(req.params.userId);
-    // Pobranie informacji o użytkowniku
-    const userQuery = await pool.query('SELECT * FROM users WHERE user_id = $1', [userId]);
-    const user = userQuery.rows[0];
+      // Pobranie informacji o użytkowniku
+      const userQuery = await pool.query('SELECT * FROM users WHERE user_id = $1', [userId]);
+      const user = userQuery.rows[0];
 
-    // Zwrócenie danych
-    res.json({
-      user: user,
-    });
-  } catch (error) {
-    console.error('Error executing query', error.stack);
-    res.status(500).send('Server error');
+      if (!user) {
+        return res.status(404).send('User not found.');
+      }
+
+      // Zwrócenie danych
+      res.status(200).json({
+        user,
+      });
+    } catch (error) {
+      console.error('Error executing query', error.stack);
+      res.status(500).send('Server error');
+    }
+  } else {
+    // Odpowiedź dla innych metod niż GET
+    res.setHeader('Allow', ['GET']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+};
