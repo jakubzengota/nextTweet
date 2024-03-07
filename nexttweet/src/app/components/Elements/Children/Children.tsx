@@ -1,15 +1,15 @@
 import React from 'react';
-
+import clsx from 'clsx';
+import style from "./Children.module.css";
 interface IHeaderProps {
-    className?: string;
     children?: React.ReactNode;
+    className?: string;
 }
 
-const Children: React.FC<IHeaderProps> = ({ className, children }) => {
+const Children: React.FC<IHeaderProps> = ({children, className }) => {
     // Używamy szablonu literału zamiast konkatenacji dla lepszej czytelności.
-    const classNames = `${className} w-full`;
     return (
-        <section id="header" className={classNames}>
+        <section id="children" className={clsx(className,style.children)}>
             {children}
         </section>
     );
