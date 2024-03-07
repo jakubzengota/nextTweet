@@ -33,3 +33,6 @@ export default async (req, res) => {
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };
+
+
+// Dodaj kolumne likes do tweetów
