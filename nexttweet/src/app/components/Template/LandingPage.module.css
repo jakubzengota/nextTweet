@@ -1,5 +1,85 @@
 .main{
     width: 100%;
+    max-width: 1420px;
     background-color: #f1f1f1;
-    background: linear-gradient(0deg, #461c40 0%, #581683 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 10px 20px;
+}
+
+.header{
+
+}
+
+.children{
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+
+}
+
+.children_default{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+
+}
+.children_default_left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.children_default_right{
+    width: 50%;
+    display: flex;
+    height: 100%;
+}
+
+
+#welcome{
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(30px 10px 4px #4444dd);
+}
+
+.children_default_left_mainText{
+    font-size: 60px;
+    color: #030303;
+}
+
+.children_default_left_secondText{
+    font-size: 18px;
+    color: #252525;
+}
+.children_default_left_divButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.buttonWelcome{
+    padding: 20px 30px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.opinion{
+    height: 100px;
+    width: 100%;
+    background-color: #F0F0F0;
 }
