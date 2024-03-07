@@ -33,6 +33,7 @@ export default function Page() {
             // alert('Zalogowano pomyślnie: ' + data.message);
             window.location.href = "/dashboard"
             // Przekieruj użytkownika do /dashboard
+            window.location.href = '/dashboard';
         } else {
             alert('Błąd logowania: ' + data.message);
         }

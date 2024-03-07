@@ -7,22 +7,19 @@ const pool = new Pool({
 export default async (req, res) => {
   if (req.method === 'GET') {
     try {
-      const userId = parseInt(req.query.userId);
-      if (isNaN(userId)) {
-        return res.status(400).send('Invalid user ID.');
-      }
+      const userId = parseInt(req.query.userId); // Użycie req.query dla parametrów zapytania zamiast req.params
 
-      // Pobranie informacji o użytkowniku
-      const userQuery = await pool.query('SELECT * FROM users WHERE user_id = $1', [userId]);
-      const user = userQuery.rows[0];
+      // Pobranie tweetów użytkownika
+      const userTweetsQuery = await pool.query('SELECT * FROM tweets WHERE user_id = $1 ORDER BY created_at DESC', [userId]);
+      const userTweets = userTweetsQuery.rows;
 
-      if (!user) {
-        return res.status(404).send('User not found.');
+      if (userTweets.length === 0) {
+        return res.status(404).json({ message: "No tweets found for this user." });
       }
 
       // Zwrócenie danych
       res.status(200).json({
-        user,
+        userTweets,
       });
     } catch (error) {
       console.error('Error executing query', error.stack);
@@ -34,3 +31,4 @@ export default async (req, res) => {
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };
+

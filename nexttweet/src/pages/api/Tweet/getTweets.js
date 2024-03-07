@@ -4,25 +4,17 @@ const pool = new Pool({
   connectionString: process.env.POSTGRES_URL,
 });
 
+// Funkcja asynchroniczna obsługująca żądanie GET
 export default async (req, res) => {
   if (req.method === 'GET') {
     try {
-      const userId = parseInt(req.query.userId);
-      if (isNaN(userId)) {
-        return res.status(400).send('Invalid user ID.');
-      }
-
-      // Pobranie informacji o użytkowniku
-      const userQuery = await pool.query('SELECT * FROM users WHERE user_id = $1', [userId]);
-      const user = userQuery.rows[0];
-
-      if (!user) {
-        return res.status(404).send('User not found.');
-      }
+      // Pobranie wszystkich tweetów
+      const allTweetsQuery = await pool.query('SELECT * FROM tweets ORDER BY created_at DESC');
+      const allTweets = allTweetsQuery.rows;
 
       // Zwrócenie danych
       res.status(200).json({
-        user,
+        allTweets,
       });
     } catch (error) {
       console.error('Error executing query', error.stack);
