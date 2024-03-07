@@ -4,22 +4,15 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
 }
 
 
 
 .logo{
-    width: 260px;
+    width: 200px;
     height: auto;
 }
-
-.menu_header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-
 
 .button_menu{
     padding: 5px 8px;
@@ -28,10 +21,20 @@
     border: none;
     border-radius: 30px;
     font-size: 12px;
+    width: auto;
+    cursor: pointer;
+}
+
+.menu_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav{
     display: flex;
     flex-direction: row;
     gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
