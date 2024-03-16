@@ -15,7 +15,7 @@ export default async (req, res) => {
     try {
       const insertTweetQuery = `
         INSERT INTO tweets (user_id, content, created_at)
-        VALUES ($1, $2, NOW()) // Używamy funkcji PostgreSQL NOW() do automatycznego ustawienia aktualnego czasu
+        VALUES ($1, $2, NOW()) 
         RETURNING *;
       `;
       const newTweet = await pool.query(insertTweetQuery, [user_id, content]);

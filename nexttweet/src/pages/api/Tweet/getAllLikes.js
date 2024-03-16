@@ -9,19 +9,19 @@ export default async (req, res) => {
 
   if (req.method === 'GET') {
     try {
-      const userLikesQuery = `
-        SELECT COUNT(*) as likes
-        FROM likes
+      const userTotalLikesQuery = `
+        SELECT SUM(likes_count) as total_likes
+        FROM tweets
         WHERE user_id = $1;
       `;
-      const userLikes = await pool.query(userLikesQuery, [user_id]);
+      const userTotalLikes = await pool.query(userTotalLikesQuery, [user_id]);
 
-      if (userLikes.rows.length === 0) {
+      if (!userTotalLikes.rows[0].total_likes) {
         // Może się zdarzyć, że użytkownik nie ma żadnych polubień.
         return res.status(404).json({ error: 'User likes not found' });
       }
 
-      res.status(200).json({ user_id: user_id, likes_count: userLikes.rows[0].likes });
+      res.status(200).json({ user_id: user_id, total_likes: userTotalLikes.rows[0].total_likes });
     } catch (error) {
       console.error('Error executing query', error.stack);
       res.status(500).send('Server error');
@@ -31,3 +31,4 @@ export default async (req, res) => {
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };
+

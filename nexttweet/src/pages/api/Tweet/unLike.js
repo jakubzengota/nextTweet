@@ -14,7 +14,7 @@ export default async (req, res) => {
 
     try {
       const deleteLikeQuery = `
-        DELETE FROM likes WHERE user_id = $1 AND tweet_id = $2 RETURNING *;
+        DELETE FROM tweets WHERE user_id = $1 AND tweet_id = $2 RETURNING *;
       `;
       const deletedLike = await pool.query(deleteLikeQuery, [user_id, tweet_id]);
 

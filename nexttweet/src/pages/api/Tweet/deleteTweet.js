@@ -14,9 +14,9 @@ export default async (req, res) => {
       `;
       const deletedTweet = await pool.query(deleteTweetQuery, [tweet_id]);
 
-      if (deletedTweet.rowCount === 0) {
-        return res.status(404).json({ error: 'Tweet not found' });
-      }
+      // if (deletedTweet.rowCount === 0) {
+      //   return res.status(404).json({ error: 'Tweet not found' });
+      // }
 
       res.status(200).json({ message: 'Tweet successfully deleted', deletedTweet: deletedTweet.rows[0] });
     } catch (error) {
