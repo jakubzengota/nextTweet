@@ -6,24 +6,28 @@ const pool = new Pool({
 
 export default async (req, res) => {
   if (req.method === 'POST') {
-    const { user_id, tweet_id } = req.body;
+    const { tweet_id } = req.body;
 
-    if (!user_id || !tweet_id) {
-      return res.status(400).json({ error: 'Missing required fields' });
+    if (!tweet_id) {
+      return res.status(400).json({ error: 'Missing required tweet_id field' });
     }
 
     try {
-      const insertLikeQuery = `
-        INSERT INTO likes (user_id, tweet_id) VALUES ($1, $2) ON CONFLICT (user_id, tweet_id) DO NOTHING RETURNING *;
+      // Aktualizacja likes_count dla danego tweet_id
+      const updateLikeQuery = `
+        UPDATE tweets
+        SET likes_count = likes_count + 1
+        WHERE tweet_id = $1
+        RETURNING *;
       `;
-      const newLike = await pool.query(insertLikeQuery, [user_id, tweet_id]);
+      const result = await pool.query(updateLikeQuery, [tweet_id]);
 
-      if (newLike.rowCount === 0) {
-        // Jeśli już istnieje taki lajk (ON CONFLICT), to nie dodajemy go ponownie.
-        return res.status(409).json({ message: 'Like already exists' });
+      if (result.rowCount === 0) {
+        // Jeśli nie znaleziono tweetu do zaktualizowania
+        return res.status(404).json({ error: 'Tweet not found' });
       }
 
-      res.status(201).json({ message: 'Like added successfully', like: newLike.rows[0] });
+      res.status(200).json({ message: 'Like added successfully', tweet: result.rows[0] });
     } catch (error) {
       console.error('Error executing query', error.stack);
       res.status(500).send('Server error');

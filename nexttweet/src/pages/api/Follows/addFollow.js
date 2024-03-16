@@ -13,14 +13,21 @@ export default async (req, res) => {
     }
 
     try {
-      const insertFollowerQuery = `
-        INSERT INTO followers (follower_id, following_id) VALUES ($1, $2) ON CONFLICT DO NOTHING RETURNING *;
+      // Sprawdź, czy użytkownik już śledzi obserwowanego użytkownika
+      const checkFollowingQuery = `
+        SELECT * FROM followers WHERE follower_id = $1 AND following_id = $2;
       `;
-      const newFollower = await pool.query(insertFollowerQuery, [follower_id, following_id]);
+      const existingFollower = await pool.query(checkFollowingQuery, [follower_id, following_id]);
 
-      if (newFollower.rowCount === 0) {
+      if (existingFollower.rows.length > 0) {
         return res.status(409).json({ message: 'Already following' });
       }
+
+      // Dodaj nowego obserwowanego użytkownika
+      const insertFollowerQuery = `
+        INSERT INTO followers (follower_id, following_id) VALUES ($1, $2) RETURNING *;
+      `;
+      const newFollower = await pool.query(insertFollowerQuery, [follower_id, following_id]);
 
       res.status(201).json({ message: 'Successfully started following', follower: newFollower.rows[0] });
     } catch (error) {

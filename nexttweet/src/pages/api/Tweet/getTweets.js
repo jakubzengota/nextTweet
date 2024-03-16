@@ -14,7 +14,7 @@ export default async (req, res) => {
 
       // Zwrócenie danych
       res.status(200).json({
-        allTweets,
+        tweets: allTweets, // Zmieniono nazwę klucza na 'tweets' dla spójności z nazwą zasobu
       });
     } catch (error) {
       console.error('Error executing query', error.stack);
@@ -26,3 +26,4 @@ export default async (req, res) => {
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };
+
