@@ -6,7 +6,8 @@ import data from "../data/data.json";
 import userSuggestions from "../data/sugestedUsers.json";
 import logo from "../../assets/ntlogo.png";
 import Image from "next/image";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
 
 
 
@@ -30,6 +31,16 @@ export default function Dashboard() {
     
     window.location.href = '/';
   };
+
+  useEffect(()=>{
+    fetch('/api/Users/getUsers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+     
+    })
+  },[])
 
 
   return (
