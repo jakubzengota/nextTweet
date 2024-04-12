@@ -2,8 +2,8 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 import translationsInEng from './locales/en/translation.json';
-import translationsInGerman from './locales/en/translation.json';
-import translationsInPolish from './locales/en/translation.json';
+import translationsInGerman from './locales/de/translation.json';
+import translationsInPolish from './locales/pl/translation.json';
 
 // the translations
 const resources = {
@@ -17,6 +17,9 @@ const resources = {
     translation: translationsInPolish
   },
 };
+
+export const availableLang = Object.keys(resources);
+
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
