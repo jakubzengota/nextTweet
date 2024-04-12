@@ -2,7 +2,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
-import data from "../data/data.json";
 import userSuggestions from "../data/sugestedUsers.json";
 import logo from "../../assets/ntlogo.png";
 import Image from "next/image";
