@@ -1,10 +1,364 @@
+// Ustawienie zmiennej dla przesunięcia childButton z floatingMenu
+$przesuniecieGitHub: 30px;
 
-.header_landingpage{
+
+html, body{
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main_container{
+    max-width: 1920px;
     width: 100%;
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main_landingPage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.header_section_logo{
+    width: 200px;
+    height: auto;
+}
+.header_section_logo_img{
+    width: 100%;
+    height: auto;
+}
+
+.header_section_nav{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.header_section_nav_links{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.header_section_nav_link{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 11px 17px;
+    border-radius: 15px;
+
+}
+
+.header_section_nav_lang_btn{
+    background: white;
+    border: 1px solid black;
+    color: black;
+    padding: 11px 17px;
+    border-radius: 15px;
+}
+
+.header_section_nav_lang{
+    display: flex;
+    align-items: center;
+}
+
+
+.child{
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+}
+
+.footer{
+    min-height: 100px;
+    padding: 10px 20px;
+
+    .footer_container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
     
+
+
+    .footer_section_socialMedia{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 15px;
+
+        .footer_section_socialMedia_textMain{
+            display: flex;
+            flex-direction: column;
+        }
+        .footer_section_socialMedia_findUs{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .footer_section_socialMedia_textMain_main{
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+
+    .footer_section_socialMedia_findUs_icons{
+        display:  flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .footer_right{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        min-height: 100px;
+        height: 100%;
+
+        .footer_section_title{
+            font-weight: bold;
+            font-size:  16px;
+        }
+
+        .footer_section_register{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .footer_section_register_buttons{
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+        }
+
+    }
+}
+
+
+
+.floatingMenu {
+    position: relative;
+    // background-color: red;
+
+    // Pętla generująca reguły CSS dla każdego elementu z klasą .floatingChild
+   .floatingChildGithub{
+       position: absolute;
+   }
+   .floatingChildGithub:nth-child(2){
+        transform: translate(0px, -50px) !important;
+    }
+    .floatingChildGithub:nth-child(3){
+        transform: translate(0px, -100px) !important;
+    }
+
+    .floatingChildGithub:nth-child(4){
+        transform: translate(0px, -150px) !important;
+    }
+
+}
+
+.landingPageWelcomeContainer{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    
+
+    .landingPageWelcomeDescription{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;    
+        align-items: center;  
+        text-align: left; 
+
+
+        .landingPageWelcomeDescription_mainText{
+            width: 100%;
+            font-size: 48px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            color: black;
+            max-width: 450px;
+
+
+            
+        }
+        .landingPageWelcomeDescription_secondText{
+            width: 100%;
+            font-size: 18px;
+            max-width: 450px;
+
+            color: black;
+        }
+        .landingPageWelcomeDescription_button{
+            width: 100%;
+            max-width: 450px;
+
+            button {
+                width: fit-content;
+                padding: 8px 10px;
+                background-color: white;
+                color: black;
+                border-radius: 20px;
+            }
+        }
+
+    }
+
+    .landingPageWelcomeImage{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;       
+
+
+        .landingPageWelcomeImageImg{
+            width: 100%;
+            height: auto;
+        }
+
+    }
+}
+
+.landingPageOpinion{
+    width: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+
+    .landingPageOpinion_opinion{
+        font-size: 26px;
+        color: black;
+        font-style: italic;
+    }
+    .landingPageOpinion_person{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+    }
+    .landingPageOpinion_personImg{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid black;
+        padding: 5px;
+    }
+    .landingPageOpinion_personName{
+        font-size: 18px;
+    }
+}
+
+.child1{
+    min-height: 75vh;
+}
+
+.imageIcon > img{
+    border-radius: 50%;
+}
+
+.login , .register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    .form{
+        width: 400px;
+        background-color: rgba(255,255,255,0.13);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid black;
+        // box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        padding: 50px 35px;
+
+
+
+        *{
+            // color: white;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+          }
+
+          h3{
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+          }
+
+
+          label{
+            display: block;
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: 500;
+          }
+          input{
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: #E8F0FE;
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+            color:black
+          }
+          ::placeholder{
+            color: black;
+          }
+
+
+
+
+
+        .button{
+            padding: 7px 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 12px;
+            width: auto;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+    }
 }
