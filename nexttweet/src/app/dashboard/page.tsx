@@ -2,7 +2,9 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
-import userSuggestions from "../data/sugestedUsers.json";
+// import userSuggestions from "../data/sugestedUsers.json";
+import userSuggestions from "../../data/sugestedUsers.json"
+import data from "../../data/data.json"
 import logo from "../../assets/ntlogo.png";
 import Image from "next/image";
 import { useState } from 'react';
@@ -61,8 +63,10 @@ export default function Dashboard() {
                 Wiadomości
               </Link>
             </li>
-            <li onClick={toggleUserProfile} className={styles.navLink}>
-              Profil
+            <li >
+            <Link href="/profile" className={styles.navLink}>
+                Profil
+              </Link>
             </li>
             <li>
               {" "}

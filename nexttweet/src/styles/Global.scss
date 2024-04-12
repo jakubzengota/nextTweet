@@ -27,6 +27,13 @@ html, body{
     min-height: 100vh;
 }
 
+.main_Profile{
+    width: 100%;
+    display: flex;
+    
+    min-height: 100vh;
+}
+
 .header{
     display: flex;
     flex-direction: row;
@@ -361,4 +368,86 @@ html, body{
             margin-top: 8px;
         }
     }
+}
+
+.AccountProfileMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.ProfileRightSide{
+    width: 50%;
+    padding: 30px;
+}
+
+.ProfileLeftSide{
+    width: 50%;
+    padding: 30px;
+}
+
+.AccountProfileAvatar{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+
+.AccountProfileName{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.AccountProfileMainStats{
+    border-radius: 25px;
+    border: 5px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.AccountProfileStat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.FollowingMain{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.followingBox{
+    display: flex;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    flex-direction: column;
+}
+
+.follow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+.followName{
+    display: flex;
+    align-items: center;
+}
+
+.followAvatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
