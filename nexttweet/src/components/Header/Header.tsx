@@ -11,11 +11,15 @@ const Header = () => {
 
 
     const { t : translate } = useTranslation();
-    const { languageModal } = React.useContext(ModalsContext) as IModalsContext;    
+    const { languageModal } = React.useContext(ModalsContext) as IModalsContext;   
+    
+    const logoClick= ()=>{
+        window.open('/')
+    }
     return(
         <header className="header">
             <section className="header_section_logo">
-                <Image src={LogoImg} priority alt={translate("LogoAlt")} className="header_section_logo_img"/>
+                <Image onClick={logoClick} src={LogoImg} priority alt={translate("LogoAlt")} className="header_section_logo_img"/>
             </section>
             <section>
                 <div className="header_section_nav">

@@ -10,9 +10,9 @@ const LandingPage = () => {
                 <Child className="child1">
                     <LandingPageWelcome />
                 </Child>
-                <Child>
+                {/* <Child>
                     <LandingPageOpinion />
-                </Child>
+                </Child> */}
             <Footer />
         </main>
     )

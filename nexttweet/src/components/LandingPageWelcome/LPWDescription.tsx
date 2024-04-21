@@ -6,10 +6,10 @@ const LPWDescription = () => {
             </div>
             <div className="landingPageWelcomeDescription_secondText">
                 <span>Dziel się swoimi przemyśleniami</span>
+                <a className="landingPageWelcomeDescription_button" href="/register">Dołącz do nas</a>
             </div>
-            <div className="landingPageWelcomeDescription_button">
-                <button>Dołącz do nas</button>
-            </div>
+            
+            
         </div>
     )
 }

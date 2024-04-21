@@ -6,10 +6,12 @@ interface FollowersProps {
 const Followers = () => {
     return (
         <div className="FollowingMain">
-            <h2>Followers</h2>
+            
             <div className="followingBox">
+            <h2>Followers</h2>
                 {/* napisać repeata z bazy */}
                 <div className="follow">
+                    
                     <div className="followName">
                         <img
                             src="https://picsum.photos/536/354"

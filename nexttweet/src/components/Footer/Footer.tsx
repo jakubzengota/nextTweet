@@ -7,6 +7,7 @@ import FMLinkedin from '../FloatingMenu/FMLinkedin';
 const Footer = () => {
     return (
         <footer className="footer">
+            
             <div className='footer_container'>
                 <div className="footer_left">
                     <section className="footer_section_socialMedia">
@@ -28,13 +29,13 @@ const Footer = () => {
                     <section className="footer_section_register">
                         <span className="footer_section_title">Dołącz do nas</span>
                         <div className="footer_section_register_buttons">
-                            <span>Zarejestruj się</span>
-                            <span>Zaloguj się</span>
+                            <a href='/register'>Zarejestruj się</a>
+                            <a href='/login'>Zaloguj się</a>
                         </div>
                     </section>
-                    <section className="footer_section_discover">
+                    {/* <section className="footer_section_discover">
                         <span className="footer_section_title">odkrywaj</span>
-                    </section>
+                    </section> */}
                 </div>
             </div>
             

@@ -49,7 +49,7 @@ const Register = () => {
     return (
         <section className="register">
             <form className="form" onSubmit={handleSubmit}>
-                <h3>REGISTER HERE</h3>
+            <span className="loginspan">REGISTER HERE</span>
                 <label htmlFor="username">Username</label>
                 <input
                     className='inputImportant'

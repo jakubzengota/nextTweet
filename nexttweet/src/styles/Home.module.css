@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Quicksand:wght@300..700&family=Sixtyfour&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
 
 
@@ -9,7 +9,7 @@
   overflow-x: hidden; /* Ukrywa poziome paski przewijania */
   width: 100%;
   flex-direction: row;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Gruppo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;

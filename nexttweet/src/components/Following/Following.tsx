@@ -6,8 +6,9 @@ interface FollowingProps {
 const Following = () => {
     return (
         <div className="FollowingMain">
-            <h2>Following</h2>
+            
             <div className="followingBox">
+            <h2>Following</h2>
                 {/* napisać repeata z bazy */}
                 <div className="follow">
                     <div className="followName">

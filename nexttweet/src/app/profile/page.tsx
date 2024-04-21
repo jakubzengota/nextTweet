@@ -5,7 +5,10 @@ import Profile from '@/templates/ProfilePage/Profile';
 export default function Page() {
 
     return(
+        <AuthTemplate>
             <Profile/>
+        </AuthTemplate>
+            
     )
 };
 

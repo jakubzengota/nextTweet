@@ -12,7 +12,9 @@ const AuthTemplate = ({children}: IAuthTemplate) => {
                 <Child className="child1">
                     {children}
                 </Child>
+                
             <Footer />
+            
         </main>
     )
 }

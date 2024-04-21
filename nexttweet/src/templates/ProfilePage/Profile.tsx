@@ -8,9 +8,9 @@ import Link from "next/link";
 const Profile = () => {
     return(
         <main className="main_Profile">
-            <Link href="/dashboard">
+            {/* <Link href="/dashboard">
                 Back
-              </Link>
+              </Link> */}
             <div className="ProfileLeftSide">
                 <AccountProfile/>
             </div>
@@ -18,7 +18,6 @@ const Profile = () => {
                 <Following/>
                 <Followers/>
             </div>
-            {/* <Footer /> */}
         </main>
     )
 }
