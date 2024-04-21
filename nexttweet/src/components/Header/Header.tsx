@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import LogoImg from "../../assets/logo.png"
 import Link from "next/link";
 import React from "react";
-import { IInterfaceContext, IModalsContext, InterfaceContext, ModalsContext } from "@/Context/ModalsContext";
+import { IModalsContext,  ModalsContext } from "@/Context/ModalsContext";
 
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
     const { languageModal } = React.useContext(ModalsContext) as IModalsContext;   
     
     const logoClick= ()=>{
-        window.open('/')
+        window.location.href = '/';
     }
     return(
         <header className="header">

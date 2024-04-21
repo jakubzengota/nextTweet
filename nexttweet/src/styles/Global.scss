@@ -32,20 +32,21 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+ height: 100vh;
 }
 
 .main_Profile {
-  background: linear-gradient(80deg, rgb(117, 185, 212), rgb(34, 114, 10));
+  background: linear-gradient(80deg, rgb(117, 185, 212), rgb(10, 20, 114));
   background-size: 200% 200%;
   animation: gradientBackground 15s ease infinite;
   width: 100%;
   display: flex;
     gap: 50px;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .header {
+    z-index: 2;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -117,6 +118,7 @@ body {
 }
 
 .footer {
+    z-index: 2;
   min-height: 100px;
   padding: 10px 20px;
   background-color: var(--almost-black);
@@ -351,12 +353,12 @@ body {
 
   .form {
     background-color: rgba(255, 255, 255, 0.13);
-    border-radius: 10px;
+    border-radius: 15px;
     backdrop-filter: blur(10px);
     // border: 1px solid black;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
       rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-    padding: 20px 35px;
+    padding: 45px 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -521,4 +523,34 @@ body {
   border-radius: 50%;
   margin-right: 10px;
   margin-bottom: 10px;
+}
+
+.zindexspan{
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--text-color);
+    font-size: 5rem;
+    font-weight: bold;
+    rotate: 30deg;
+}
+
+.followIcon{
+    font-size: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.followIcon:hover{
+    transform: scale(1.2);
+}
+
+.error-message {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
 }

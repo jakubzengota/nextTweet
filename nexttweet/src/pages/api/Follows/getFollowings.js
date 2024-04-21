@@ -10,10 +10,10 @@ export default async (req, res) => {
 
     try {
       const getFollowingsQuery = `
-        SELECT u.user_id, u.username, u.email
-        FROM users u
-        INNER JOIN followers f ON f.following_id = u.user_id
-        WHERE f.follower_id = $1;
+      SELECT u.username
+      FROM users u
+      INNER JOIN followings f ON f.following_id = u.user_id
+      WHERE f.follower_id = $1;
       `;
       const followings = await pool.query(getFollowingsQuery, [user_id]);
 

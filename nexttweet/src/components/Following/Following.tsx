@@ -1,3 +1,4 @@
+import { RiUserUnfollowFill } from "react-icons/ri";
 
 interface FollowingProps {
     children: React.ReactNode;
@@ -19,8 +20,8 @@ const Following = () => {
                         />
                         <span>John Smith</span>
                     </div>
-                    <div>
-                        <span> + / - </span>
+                    <div className="followIcon">
+                        <RiUserUnfollowFill />
                     </div>
                 </div>
                 <div className="follow">
@@ -32,8 +33,8 @@ const Following = () => {
                         />
                         <span>John Smith</span>
                     </div>
-                    <div>
-                        <span> + / - </span>
+                    <div className="followIcon">
+                        <RiUserUnfollowFill />
                     </div>
                 </div>
             </div>

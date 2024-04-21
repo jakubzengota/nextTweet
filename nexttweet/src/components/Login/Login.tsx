@@ -5,6 +5,8 @@ import { useState } from "react";
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [userId, setUserId] = useState(null);
+    const [error, setError] = useState("");
 
     const handleSubmit = async (event: any) => {
         event.preventDefault(); // Zapobiegaj domyślnej akcji formularza
@@ -18,13 +20,16 @@ const Login = () => {
         });
 
         const data = await response.json();
+        
 
         if (response.ok) {
+            setUserId(data?.user_id)
             // alert('Zalogowano pomyślnie: ' + data.message);
             window.location.href = "/dashboard";
             // Przekieruj użytkownika do /dashboard
         } else {
-            alert("Błąd logowania: " + data.message);
+            setError(data.message || "Nieprawidłowe dane lub błąd logowania.");
+            // alert("Błąd logowania: " + data.message);
         }
     };
 
@@ -35,7 +40,7 @@ const Login = () => {
     };
     return (
         <section className="login">
-            
+             {error && <div className="error-message">{error}</div>}
             <form className="form" onSubmit={handleSubmit}>
                 <span className="loginspan">LOGIN HERE</span>
                 <label htmlFor="username">Username</label>

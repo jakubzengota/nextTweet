@@ -9,15 +9,16 @@ export default async (req, res) => {
     const { user_id } = req.query;
 
     try {
-      const getFollowersQuery = `
-        SELECT u.user_id, u.username, u.email
+      // Modify the query to return usernames of the users that are being followed
+      const getFollowingUsernamesQuery = `
+        SELECT u.username
         FROM users u
-        INNER JOIN followers f ON f.follower_id = u.user_id
-        WHERE f.following_id = $1;
+        INNER JOIN followers f ON f.following_id = u.user_id
+        WHERE f.follower_id = $1;
       `;
-      const followers = await pool.query(getFollowersQuery, [user_id]);
+      const result = await pool.query(getFollowingUsernamesQuery, [user_id]);
 
-      res.status(200).json({ success: true, followers: followers.rows });
+      res.status(200).json({ success: true, followers: result.rows });
     } catch (error) {
       console.error('Error executing query', error.stack);
       res.status(500).send('Server error');

@@ -16,7 +16,8 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { username, password } = req.body;
     try {
-      const { rows } = await pool.query('SELECT password_hash FROM users WHERE username = $1 OR email = $1', [username]);
+      // Add user_id to the SELECT statement
+      const { rows } = await pool.query('SELECT user_id, password_hash FROM users WHERE username = $1 OR email = $1', [username]);
       if (rows.length === 0) {
         res.status(401).json({ success: false, message: 'Niepoprawne dane logowania' });
         return;
@@ -36,9 +37,14 @@ export default async function handler(req, res) {
           { expiresIn: '1h' }
         );
 
-        // Move the Set-Cookie header and response inside the if block
+        // Include user_id in the successful login response
         res.setHeader('Set-Cookie', `token=${token}; HttpOnly; Path=/; Max-Age=3600`);
-        res.status(200).json({ success: true, message: 'Zalogowano pomyślnie', token });
+        res.status(200).json({
+          success: true,
+          message: 'Zalogowano pomyślnie',
+          token,
+          user_id: rows[0].user_id  // Include the user_id in the response
+        });
       } else {
         res.status(401).json({ success: false, message: 'Niepoprawne dane logowania' });
       }

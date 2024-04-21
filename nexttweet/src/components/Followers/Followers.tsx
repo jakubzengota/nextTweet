@@ -1,3 +1,4 @@
+import { SlUserFollow } from "react-icons/sl";
 
 interface FollowersProps {
     children: React.ReactNode;
@@ -20,8 +21,8 @@ const Followers = () => {
                         />
                         <span>John Smith</span>
                     </div>
-                    <div>
-                        <span>Connect</span>
+                    <div className="followIcon">
+                        <SlUserFollow />
                     </div>
                 </div>
             </div>
