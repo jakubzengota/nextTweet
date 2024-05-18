@@ -23,7 +23,6 @@ const ModalsProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
     const [isOpenModalLanguage, setIsOpenModalLanguage] = useState(false);
 
     const openModalLanguage = () => {
-        console.log("test")
         setIsOpenModalLanguage(true);
     };
 

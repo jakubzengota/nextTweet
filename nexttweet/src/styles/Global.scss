@@ -32,7 +32,14 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
- height: 100vh;
+  min-height: 100vh;
+}
+
+.main_template {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .main_Profile {
@@ -117,9 +124,15 @@ body {
   min-height: 100px;
 }
 
+.child_main{
+  background: linear-gradient(80deg, rgb(117, 185, 212), rgb(10, 20, 114));
+  background-size: 200% 200%;
+  animation: gradientBackground 15s ease infinite;
+}
+
 .footer {
     z-index: 2;
-  min-height: 100px;
+  min-height: 40px;
   padding: 10px 20px;
   background-color: var(--almost-black);
   color: white;
@@ -340,11 +353,13 @@ body {
   background: linear-gradient(80deg, rgb(5, 124, 172), rgb(199, 10, 35));
   background-size: 200% 200%; /* Extend the size of the gradient for a smooth transition */
   animation: gradientBackground 15s ease infinite; /* Apply the animation */
+  padding: 20px 0;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  // min-height: 100vh;
 
   .loginspan {
     color: var(--almost-black);
@@ -434,6 +449,98 @@ body {
       rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
     padding: 20px 35px;
 }
+
+.AddTweet{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+   background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    // border: 1px solid black;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+      rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    padding: 20px 35px;
+
+
+    button {
+      appearance: none;
+      background-color: transparent;
+      border: 0.125em solid #1A1A1A;
+      border-radius: 0.9375em;
+      box-sizing: border-box;
+      color: #3B3B3B;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+      margin: 10px;
+      // min-height: 3.75em;
+      min-width: 0;
+      outline: none;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      will-change: transform;
+     }
+     
+     button:disabled {
+      pointer-events: none;
+     }
+     
+     button:hover {
+      color: #fff;
+      background-color: #1A1A1A;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+      transform: translateY(-2px);
+     }
+     
+     button:active {
+      box-shadow: none;
+      transform: translateY(0);
+     }
+}
+.AddTweetInputDiv{
+  border: 1px solid black;
+  width: 400px;
+  height: 110px;
+}
+
+#addTweetTextarea{
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+
+.loading{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tweets{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.tweet{
+  width: 400px;
+}
+
+
 
 .ProfileRightSide {
   width: 60%;

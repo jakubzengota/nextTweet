@@ -2,13 +2,18 @@
   import React, { useState } from 'react';
 import FMGitHub from '../FloatingMenu/FMGithub';
 import FMLinkedin from '../FloatingMenu/FMLinkedin';
+import useIsAuth from '@/utils/useIsAuth';
 
 
 const Footer = () => {
+
+    const isAuth = useIsAuth();
+
     return (
         <footer className="footer">
-            
-            <div className='footer_container'>
+            {
+                !isAuth && 
+                <div className='footer_container'>
                 <div className="footer_left">
                     <section className="footer_section_socialMedia">
                         <div className='footer_section_socialMedia_textMain'>
@@ -38,6 +43,8 @@ const Footer = () => {
                     </section> */}
                 </div>
             </div>
+            }
+            
             
         </footer>
     )

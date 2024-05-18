@@ -10,8 +10,6 @@ interface IImageIconProps {
 }
 
 const ImageIcon = ({ src, alt }: IImageIconProps) => {
-    console.log("src: ", src);
-    console.log("alt: ", alt);
 
     return (
         <div className="imageIcon">
@@ -23,7 +21,6 @@ const ImageIcon = ({ src, alt }: IImageIconProps) => {
 const FMGitHub = () => {
     const [isOpen, setIsOpen] = useState(false);
     const githubProfiles: GithubProfile[] = userData.profile.github;
-    console.log("githubProfiles: ", githubProfiles);
 
     const openMenu = () => {
         setIsOpen(!isOpen);

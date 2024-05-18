@@ -38,7 +38,7 @@ export default async function handler(req, res) {
         );
 
         // Include user_id in the successful login response
-        res.setHeader('Set-Cookie', `token=${token}; HttpOnly; Path=/; Max-Age=3600`);
+        res.setHeader('Set-Cookie', `token=${token}; Path=/; Max-Age=3600`);
         res.status(200).json({
           success: true,
           message: 'Zalogowano pomyślnie',

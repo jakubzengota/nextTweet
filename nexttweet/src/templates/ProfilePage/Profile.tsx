@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 
 const Profile = () => {
-
+    console.log("test1")
     const [followers, setFollowers] = useState([])
     const [followings, setFollowings] = useState([])
 
