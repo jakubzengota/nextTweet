@@ -62,6 +62,10 @@ By focusing on these aspects, we strive to create a dynamic and engaging environ
 
 Built with (tutaj damy wszystkie języki library i frameworki ktore użyliśmy)
 
+
+
+
+
 ## Technologies
 
 - **SASS (SCSS):**
@@ -86,8 +90,16 @@ Here are the available endpoints with detailed descriptions:
 
 
 - `POST /api/register` - Register a new user
+
+In progress
+  
 - `GET /api/tweets` - Fetch all tweets
+
+
+  
 - `POST /api/tweets` - Add a new tweet
+
+
 
 
 ## Future Plans
