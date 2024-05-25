@@ -148,6 +148,16 @@
   width: 100%;
   padding: 20px;
 }
+
+@media (width < 1000px) {
+  .post {
+    padding: 10px;
+    width: 90%;
+  }
+
+  
+}
+
 .postHeader {
   margin-bottom: 20px;
   justify-content: space-between;

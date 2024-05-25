@@ -40,7 +40,7 @@ const AddTweet = () => {
   useEffect(() => {}, []);
   return (
     <div className="AddTweet">
-      <div>
+      <div className="dashboardHeader">
         <Image
           src={"https://picsum.photos/536/354"}
           alt="Avatar"

@@ -48,13 +48,11 @@ const Header = () => {
                             <nav className="header_section_nav_links">
                                 <Link href="/dashboard" className="header_section_nav_link">Dashboard</Link>
                                 <Link href="/profile" className="header_section_nav_link">Profile</Link>
-
-                            </nav>
-                            <div className="header_section_nav_lang">
                                 <button className="header_section_nav_lang_btn" onClick={()=> logout()}>
-                                    LOG OUT
+                                    Logout
                                 </button>
-                            </div>
+                            </nav>
+                                
                         </div>
                     </section>
 

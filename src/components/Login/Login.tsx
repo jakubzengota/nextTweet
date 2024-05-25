@@ -76,7 +76,7 @@ const Login = () => {
                     value={password}
                     onChange={handleInputChange}
                 />
-                <div>
+                <div className="dontHaveAcc">
                     <span>Dont have an account?</span>
                     <Link style={{ color: "black" }} href="/register">
                         <span>Sign up</span>

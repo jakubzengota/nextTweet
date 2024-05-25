@@ -10,7 +10,7 @@ const Following = () => {
         <div className="FollowingMain">
             
             <div className="followingBox">
-            <h2>Following</h2>
+            <span className='followingFollowersSpan'>Following</span>
                 {/* napisać repeata z bazy */}
                 <div className="follow">
                     <div className="followName">

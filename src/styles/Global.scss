@@ -681,3 +681,184 @@ body {
     margin-bottom: 15px;
     text-align: center;
 }
+
+@media (width < 1000px) {
+
+
+  .loginspan{
+    font-size: 18px !important;
+  }
+
+  .header{
+    font-size: 10px;
+  }
+
+  .landingPageWelcomeDescription{
+    padding-left: 2rem;
+  }
+
+  .footer{
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .landingPageWelcomeDescription_secondText{
+    flex-direction: column;
+    align-items: flex-start !important;
+    font-size: 15px;
+    gap: 5px;
+  }
+
+  .landingPageWelcomeDescription_button{
+    padding: 8px !important;
+  }
+
+  .form{
+    padding: 15px !important;
+  }
+
+  .login{
+    padding: 20px !important;
+  }
+
+  .dontHaveAcc{
+    font-size: 10px;
+  }
+
+  .loginExample{
+    padding: 15px;
+  }
+
+  .tweet{
+    width: 80%;
+  }
+
+  .AddTweet{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .AddTweetInputDiv{
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  #addTweetTextarea{
+    width: 80%;
+    padding: 20px;
+    overflow-y: hidden;
+  }
+
+  .dashboardHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .header_section_nav{
+    font-size: 10px;
+  }
+
+  .header_section_nav_lang_btn{
+    font-size: 10px;
+  }
+
+  .header_section_logo_img{
+    width: 100px;
+  }
+
+  .header{
+    padding: 5px;
+  }
+
+  .header_section_nav_link{
+    width: auto;
+    text-wrap: wrap;
+  }
+  .header_section_nav_links{
+    gap: 0;
+  }
+
+  .main_Profile{
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    padding-top: 20px;
+  }
+
+  .AccountProfileName{
+    font-size: 10px;
+  }
+
+  .ProfileLeftSide{
+    width: 100%;
+  }
+
+  .child_main{
+    overflow-x: hidden;
+  }
+
+  .ProfileLeftSide{
+    padding: 0;
+  }
+
+  .AccountProfileMainStats{
+    font-size: 10px;
+  }
+
+  .ProfileLeftSide{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .AccountProfileMain{
+    padding: 10px;
+    width: 80%;
+  }
+.followingBox{
+  font-size: 10px;
+}
+
+.FollowingMain{
+  width: 100%;
+}
+
+.ProfileRightSide{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  padding: 20px;
+}
+
+.zindexspan{
+  display: none;
+}
+
+.follow{
+  margin: 0;
+  height: inherit;
+}
+
+.AccountProfileMain{
+  padding: 20px;
+}
+
+.followAvatar{
+  height: 20px;
+  width: 20px;
+}
+
+.followingFollowersSpan{
+  padding: 5px;
+  color: white;
+}
+
+}
