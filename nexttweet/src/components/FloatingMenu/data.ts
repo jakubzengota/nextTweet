@@ -9,6 +9,7 @@ export interface GithubProfile {
 export interface LinkedinProfile {
     displayName: string;
     linkedinUrl: string;
+    avatarUrl: string;
 }
 
 export interface ProfileData {
@@ -50,17 +51,21 @@ const userData: UserData = {
         ],
         linkedin: [
             {
+                displayName: "Jakub Zengota",
+                linkedinUrl: "",
+                avatarUrl: "https://avatars.githubusercontent.com/u/72916687?v=4"
+            },
+            {
                 displayName: "Adam Sztandar",
-                linkedinUrl: "https://www.linkedin.com/in/adam-sztandar-03a7a0238/"
+                linkedinUrl: "https://www.linkedin.com/in/adam-sztandar-03a7a0238/",
+                avatarUrl: "https://avatars.githubusercontent.com/u/10097355?v=4"
             },
             {
                 displayName: "Krystian Zak",
-                linkedinUrl: ""
+                linkedinUrl: "",
+                avatarUrl: "https://avatars.githubusercontent.com/u/147444905?v=4",
             },
-            {
-                displayName: "Jakub Zengota",
-                linkedinUrl: ""
-            }
+            
         ]
     }
 };

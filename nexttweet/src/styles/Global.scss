@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 // Ustawienie zmiennej dla przesunięcia childButton z floatingMenu
 $przesuniecieGitHub: 30px;
 
@@ -17,7 +17,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  font-family: "Gruppo", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .main_container {
@@ -231,6 +231,18 @@ body {
   }
 }
 
+.loginExample{
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  // border: 1px solid black;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  padding: 45px 35px;
+  display: flex;
+  flex-direction: column;
+}
+
 .landingPageWelcomeContainer {
   background: linear-gradient(80deg, rgb(5, 124, 172), rgb(199, 10, 142));
   background-size: 200% 200%;
@@ -359,6 +371,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 2rem;
   // min-height: 100vh;
 
   .loginspan {
@@ -440,6 +453,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
+  flex-direction: column;
   gap: 20px;
    background-color: rgba(255, 255, 255, 0.13);
     border-radius: 10px;
@@ -455,12 +469,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
-   background-color: rgba(255, 255, 255, 0.13);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    // border: 1px solid black;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
-      rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  
     padding: 20px 35px;
 
 
@@ -508,15 +517,20 @@ body {
      }
 }
 .AddTweetInputDiv{
-  border: 1px solid black;
-  width: 400px;
-  height: 110px;
+  width: 420px;
+  height: 50px;
 }
 
 #addTweetTextarea{
   width: 100%;
   height: 100%;
   resize: none;
+  background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    // border: 1px solid black;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+      rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }
 
 .loading{
@@ -525,6 +539,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.addTweetBtn{
+  color: white;
+  background-color: white;
 }
 
 .tweets{
@@ -575,6 +594,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 15px;
+  width: fit-content;
 }
 
 .AccountProfileStat {
@@ -582,7 +602,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   color: var(--text-color);
 }
 

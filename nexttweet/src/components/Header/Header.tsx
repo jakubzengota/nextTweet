@@ -15,12 +15,27 @@ const Header = () => {
     const { languageModal } = React.useContext(ModalsContext) as IModalsContext;   
     
     const logoClick= ()=>{
-        window.location.href = '/';
+        // window.location.href = '/';
     }
 
-    const logout = () => {
-        console.log("dodać wylogowywanie")
-    }
+    const logout = async () => {
+        try {
+          const response = await fetch('/api/Auth/logout', { 
+            method: 'POST', 
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          });
+          const data = await response.json();
+          if (data.success) {
+            console.log(data.message); 
+            window.location.href = '/'; 
+          }
+        } catch (error) {
+          console.error('Wystąpił problem z wylogowaniem:', error);
+        }
+      }
+
     return(
         <header className="header">
             <section className="header_section_logo">
@@ -54,9 +69,9 @@ const Header = () => {
                                 <Link href="/register" className="header_section_nav_link">{"Zarejestruj się"}</Link>
                             </nav>
                             <div className="header_section_nav_lang">
-                                <button className="header_section_nav_lang_btn" onClick={languageModal.openModalLanguage}>
+                                {/* <button className="header_section_nav_lang_btn" onClick={languageModal.openModalLanguage}>
                                     PL
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     </section>

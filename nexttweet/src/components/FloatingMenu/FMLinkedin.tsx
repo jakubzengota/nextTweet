@@ -31,7 +31,7 @@ const FMLinkedin = () => {
     }
     return (
         <>
-            <FloatingMenu
+            {/* <FloatingMenu
                 slideSpeed={500}
                 direction={Directions.Up}
                 spacing={8}
@@ -53,9 +53,10 @@ const FMLinkedin = () => {
                         onClick={() => handleClickProfile(profile.linkedinUrl)}
                         className="floatingChildGithub"
                         title={profile.displayName}
+                        icon={<ImageIcon src={profile.avatarUrl} alt={profile.displayName} />}
                     />
                 ))}
-            </FloatingMenu>
+            </FloatingMenu> */}
         </>
     );
 };

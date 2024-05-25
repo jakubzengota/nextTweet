@@ -4,7 +4,7 @@ import pool from '../../../../init-db';
 import PasswordValidator from 'password-validator';
 // npm install password-validator
 
-//schemat walidacji hasła
+// Schemat walidacji hasła
 const passwordSchema = new PasswordValidator();
 passwordSchema
   .is().min(8)                                // Minimalna długość 8 znaków
@@ -58,37 +58,7 @@ export default async function register(req, res) {
 
     res.status(201).json({ success: true, message: 'Użytkownik zarejestrowany pomyślnie.', user: newUser.rows[0] });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ success: false, message: 'Wewnętrzny błąd serwera.' });
+    console.error('Database operation failed:', error);
+    res.status(500).json({ success: false, message: 'Wewnętrzny błąd serwera.', error: error.message });
   }
 }
-
-
-
-// // init-db.js
-
-// import { Pool } from 'pg';
-// import { config } from 'dotenv';
-
-// // Ładowanie zmiennych środowiskowych z pliku .env.local
-// config({ path: './.env.local' });
-
-// // Konfiguracja połączenia z bazą danych z użyciem zmiennych środowiskowych
-// const pool = new Pool({
-//   connectionString: process.env.POSTGRES_URL,
-//   ssl: {
-//     rejectUnauthorized: false // Jeśli używasz bazy danych, która wymaga SSL, jak na przykład Heroku
-//   }
-// });
-
-// export default pool;
-
-
-
-
-
-
-
-
-
-// Logowanie, zbadac element, netowrk   Payload = response  (i w response najlepiej zeby było: zalogowano pomyslnie status 200)

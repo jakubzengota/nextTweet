@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
+import Loading from "../../assets/ZKZg.gif";
+import Image from "next/image";
 
 
 const Login = () => {
@@ -7,10 +9,11 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const [userId, setUserId] = useState(null);
     const [error, setError] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = async (event: any) => {
         event.preventDefault(); // Zapobiegaj domyślnej akcji formularza
-
+        setIsLoading(true)
         const response = await fetch("/api/Auth/login", {
             method: "POST",
             headers: {
@@ -23,13 +26,14 @@ const Login = () => {
         
 
         if (response.ok) {
+            
             setUserId(data?.user_id)
-            // alert('Zalogowano pomyślnie: ' + data.message);
+            
             window.location.href = "/dashboard";
-            // Przekieruj użytkownika do /dashboard
+            setIsLoading(false)
         } else {
+            setIsLoading(false)
             setError(data.message || "Nieprawidłowe dane lub błąd logowania.");
-            // alert("Błąd logowania: " + data.message);
         }
     };
 
@@ -41,7 +45,19 @@ const Login = () => {
     return (
         <section className="login">
              {error && <div className="error-message">{error}</div>}
-            <form className="form" onSubmit={handleSubmit}>
+            <div className="loginExample">
+                <span style={{color: "white"}}>Login: emilyjones@example.com</span>
+                <span style={{color: "white"}}>Password: Passw0rd$A</span>
+            </div>
+
+            {isLoading ? 
+           <div className="loading">
+            <Image src={Loading} alt="" width={30} height={30}/>
+           </div>
+           
+           :
+           
+           <form className="form" onSubmit={handleSubmit}>
                 <span className="loginspan">LOGIN HERE</span>
                 <label htmlFor="username">Username</label>
                 <input
@@ -68,7 +84,8 @@ const Login = () => {
                 </div>
 
                 <button className="button" type="submit">Log In</button>
-            </form>
+            </form>}
+            
            
         </section>
     )

@@ -8,31 +8,34 @@ const Register = () => {
     const [email, setEmail] = useState('');
 
     const handleSubmit = async (event: any) => {
-        event.preventDefault();
+        alert('Only an administrator can create new accounts');
 
-        if (password !== confirmPassword) {
-            alert('Passwords do not match');
-            return;
-        }
+        // event.preventDefault();
 
-        const response = await fetch('/api/Auth/register', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ username, password, email }),
-        });
+        // if (password !== confirmPassword) {
+        //     alert('Passwords do not match');
+        //     return;
+        // }
 
-        const data = await response.json();
+        // const response = await fetch('/api/Auth/register', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({ username, email, password, confirmPassword }),
+        // });
 
-        if (response.ok) {
-            alert('Rejestracja udana: ' + data.message);
-        } else {
-            alert('Błąd rejestracji: ' + data.message);
-        }
+        // const data = await response.json();
+
+        // if (response.ok) {
+        //     alert('Rejestracja udana: ' + data.message);
+        // } else {
+        //     alert('Błąd rejestracji: ' + data.message);
+        // }
     };
 
     const handleInputChange = (event: any) => {
+        console.log(event)
         const { id, value } = event.target;
         if (id === 'username') setUsername(value);
         if (id === 'password') setPassword(value);
@@ -41,13 +44,13 @@ const Register = () => {
     };
 
 
-    const handleSignUpWithGoogle = () => {
-        // handle sign up with Google action
-    };
 
 
     return (
         <section className="register">
+            <div className="loginExample">
+                <span style={{color: "white"}}>Only an administrator can create new accounts</span>
+            </div>
             <form className="form" onSubmit={handleSubmit}>
             <span className="loginspan">REGISTER HERE</span>
                 <label htmlFor="username">Username</label>

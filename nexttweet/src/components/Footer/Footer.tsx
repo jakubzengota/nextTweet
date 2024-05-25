@@ -22,10 +22,10 @@ const Footer = () => {
                         </div>
                         <div className="footer_section_socialMedia_findUs">
                             <span>Znajdz nas na:</span>
-                            <div className='footer_section_socialMedia_findUs_icons'>
+                            {/* <div className='footer_section_socialMedia_findUs_icons'>
                                 <FMGitHub />
                                 <FMLinkedin />
-                            </div>
+                            </div> */}
 
                         </div>
                     </section>

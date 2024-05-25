@@ -10,7 +10,6 @@ export default function RegisterPage() {
     const router = useRouter();
 
     useEffect(() => {
-        console.log("isAtuhaa:", isAuth)
     if (isAuth) {
         const url = "/dashboard" 
         router.push(url)

@@ -14,10 +14,12 @@ const AccountProfile = () => {
                   />
                   <div>
                     <div className="AccountProfileName">
-                            <h2>Jane Doe</h2>
+                            <h2>EmilyJones</h2>
                             <span>San Froancisco</span>
                     </div>
-                    <div className="AccountProfileMainStats">
+                    
+                  </div>
+                  <div className="AccountProfileMainStats">
                         <div className="AccountProfileStat">
                             <span>15</span>
                             <span>Latest tweets</span>
@@ -31,7 +33,6 @@ const AccountProfile = () => {
                             <span>Notifications</span>
                         </div>
                     </div>
-                  </div>
                   
         </div>
     )

@@ -56,13 +56,13 @@ const Tweets = () => {
         {
            isLoading ? 
            <div className="loading">
-            <Image src={Loading} alt="" width={50} height={50}/>
+            <Image src={Loading} alt="" width={30} height={30}/>
            </div>
            
            :
            <div className="tweets">
            <div className="tweet">
-           {tweets.map((tweet, idx) => (
+           {tweets.map((tweet:any, idx) => (
              <div key={idx} className={styles.post}>
                <div className="postHeader" style={{ display: "flex", justifyContent: "space-between" }}>
                  <div style={{ display: "flex" }}>

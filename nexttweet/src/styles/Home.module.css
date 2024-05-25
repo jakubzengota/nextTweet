@@ -138,7 +138,11 @@
 }
 
 .post {
-  background-color: #1f1f1f;
+  background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+      rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
   margin-bottom: 20px;
   border-radius: 10px;
   width: 100%;

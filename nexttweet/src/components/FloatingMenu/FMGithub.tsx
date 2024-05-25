@@ -31,7 +31,7 @@ const FMGitHub = () => {
     }
     return (
         <>
-            <FloatingMenu
+            {/* <FloatingMenu
                 slideSpeed={500}
                 direction={Directions.Up}
                 spacing={8}
@@ -55,7 +55,7 @@ const FMGitHub = () => {
                         title={profile.displayName}
                     />
                 ))}
-            </FloatingMenu>
+            </FloatingMenu> */}
         </>
     );
 };

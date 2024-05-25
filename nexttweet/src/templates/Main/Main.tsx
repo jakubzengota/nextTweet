@@ -20,8 +20,9 @@ const MainTemplate = ({page, children}: IMainTemplate) => {
                         {children}
                     </Child>
                     
-                <Footer />
+                    <Footer />
             </main>
+            
         </IsAuth>
     )
 }
