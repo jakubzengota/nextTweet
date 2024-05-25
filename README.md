@@ -5,12 +5,12 @@
 ## Table of Contents
 1. [Project Description](#project-description)
 2. [Getting Started](#getting-started)
-3. [Requirements](#requirements)
-4. [Features](#features)
-5. [Technologies](#technologies)
+3. [Features](#features)
+4. [Technologies](#technologies)
+5. [View of our project](#view-of-our-project)
 6. [Endpoints](#endpoints)
 7. [Future Plans](#future-plans)
-8. [Database Authentication](#database-authentication)
+8. [Database env](#database-env)
    
 About the Project
 NextTweet is an early-stage clone of Twitter, built using Next.js and Vercel. The project is still under development, with additional features such as follows and likes planned for future releases.
@@ -40,6 +40,9 @@ To set up the project locally, follow these steps:
     ```
 4. **Create a `.env` file:**
     - Copy the `.env.example` file to `.env` and fill in the necessary environment variables.
+
+  (jezeli ktos chce sobie postawic baze w vercelu to moze skorzystac automatycznego tworzenia tabel tweets, users, followings z pliku init-db.js uruchamiajac za pomocą komendy: node initdb
+  
 5. **Start the project:**
     ```bash
     npm run dev
@@ -47,26 +50,19 @@ To set up the project locally, follow these steps:
 This will launch the application on http://localhost:3000 or the next available port. Navigate to the URL in your browser to start using the application.
 
 
-# Usage
-Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
-
-
 
 **Key features of our application include:**
 
 **Social Interactions:** Users can engage with the content and with each other through likes, follows, and retweets, enhancing the social experience.
+
 **User-Friendly Interface:** We've designed a clean, intuitive interface that makes navigation and interaction seamless and straightforward for users of all tech levels.
+
 **Continuous Improvement:** The project is built with scalability in mind, allowing for ongoing enhancements and the addition of new features based on user feedback and technological advancements.
+
 By focusing on these aspects, we strive to create a dynamic and engaging environment that keeps users informed and connected, no matter where they are.
 
-Built with (tutaj damy wszystkie języki library i frameworki ktore użyliśmy)
 
-
-
-
-
-## Technologies
+## Technologies   (postgresql)
 
 - **SASS (SCSS):**
   - We use SCSS for styling the project. SCSS allows nesting of classes within other classes, making the CSS more modular and easier to maintain.
@@ -78,6 +74,27 @@ Built with (tutaj damy wszystkie języki library i frameworki ktore użyliśmy)
   - Vercel is used for hosting and as the database for our project. It offers seamless deployment and scalability, making it an excellent choice for modern web applications.
 
 
+Used libraries:
+
+- @fortawesome/free-brands-svg-icons
+- @fortawesome/react-fontawesome
+- @nextui-org
+- @types/js-cookie
+- @vercel/postgres
+- bcrypt
+- framer-motion
+- js-cookie
+- jsonwebtoken
+- next-auth
+- password-validator
+- pg
+- vercel
+
+
+
+## View of our project  (screeny i lekki opis co na screenach)
+
+
 
 ## Endpoints
 
@@ -87,18 +104,19 @@ Here are the available endpoints with detailed descriptions:
 
 ![1](https://github.com/jakubzengota/nextTweet/assets/147444905/551f59e2-76f9-40d2-b66f-2257eff8f8da)
 ![2](https://github.com/jakubzengota/nextTweet/assets/147444905/89766320-683d-456a-97a1-0c043844d545)
-
+w loginie jest ten token otrzymujemy
 
 - `POST /api/register` - Register a new user
+jakie wymaganie odnosnie hasla i ze automatycznie haslo jest hashowane biblioteka bcript i w bazie zapisywane w formie hasha
 
-In progress
+
+Cała autentykacja dziala za pomoca JWT tokena i wylogowywanie zdejmuje z użytkownika token.
+
+/api.tweet/add tweet               add tweet jako kolejny (nie trzeba za bardzo opisywac)
   
-- `GET /api/tweets` - Fetch all tweets
+- `GET /api/tweets` - Fetch/get all tweets
 
-
-  
-- `POST /api/tweets` - Add a new tweet
-
+get user (pobranie info od usera)
 
 
 
@@ -117,13 +135,19 @@ The project is in active development. Here are some features we plan to implemen
 
 - **User Profiles:**
   - Providing detailed user profiles where users can view their tweets, followers, and following lists.
+ 
+    (autentykacja za pomoca googla, facebooka i githuba)
+    (weryfikacja mailowa)
+    (zmiana maila)
+    (przypomnienie hasla)
+    (chat pomiedzy userami za pomocą web socketów)
 
 
 ## Database Authentication
 
 Database authentication details for Postgres are stored in the `.env` file. When setting up a new database on Vercel, you can use the `unitDB` file to create the necessary tables.
 
-```javascript
+'''javascript
 const Pool = new Pool({
     connectionString: process.env.DATABASE_URL,
 });
@@ -136,9 +160,4 @@ DATABASE: (tutaj screenshot z Vercela)
 Thank you for your interest in NextTweet! We welcome collaboration and feedback to improve the project.
 
 
-
-
-
-
-
-
+(kto byl za co odpowiedzialny z projekcie)
