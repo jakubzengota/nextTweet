@@ -1,9 +1,7 @@
-export default async function handler(req, res) {
-    if (req.method === 'POST') {
-        
-      res.status(200).json({ message: 'Logout successful' });
-    } else {
+export default async function logout(req, res) {
+  // Ustawienie pliku cookie na czas wygaśnięcia w przeszłości
+  res.setHeader('Set-Cookie', `token=; HttpOnly; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT`);
 
-      res.status(405).end();
-    }
-  }
+  // Odpowiedź potwierdzająca wylogowanie
+  res.status(200).json({ success: true, message: 'Wylogowano pomyślnie' });
+}

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+// import { Inter } from 'next/font/google'
+import '../styles/Global.scss';
+import Modals from '@/components/Modals/Modals';
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 
 
@@ -13,7 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body suppressHydrationWarning={true}>
+        <section className='main_container'>
+          {children}
+        </section>
+        <Modals />
+      </body>
       
     </html>
   )
