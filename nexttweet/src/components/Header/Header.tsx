@@ -39,7 +39,7 @@ const Header = () => {
     return(
         <header className="header">
             <section className="header_section_logo">
-                <Image onClick={logoClick} src={LogoImg} priority alt={translate("LogoAlt")} width={50} height={50} className="header_section_logo_img"/>
+                <Image onClick={logoClick} src={LogoImg} priority alt={translate("LogoAlt")} width={250} height={250} className="header_section_logo_img"/>
             </section>
             {
                 isAuth && 

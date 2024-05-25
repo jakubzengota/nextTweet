@@ -11,8 +11,8 @@ const AccountProfile = () => {
                   <Image
                     src={"https://picsum.photos/536/354"}
                     alt="Avatar"
-                    height={50}
-                    width={50}
+                    height={250}
+                    width={250}
                     className="AccountProfileAvatar"
                   />
                   <div>
