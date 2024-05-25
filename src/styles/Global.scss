@@ -789,6 +789,7 @@ body {
     align-items: center;
     display: flex;
     padding-top: 20px;
+    gap: 0;
   }
 
   .AccountProfileName{
@@ -835,8 +836,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
-  padding: 20px;
 }
 
 .zindexspan{
