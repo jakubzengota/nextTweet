@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { RiUserUnfollowFill } from "react-icons/ri";
 
 interface FollowingProps {
@@ -13,7 +14,7 @@ const Following = () => {
                 {/* napisać repeata z bazy */}
                 <div className="follow">
                     <div className="followName">
-                        <img
+                        <Image
                             src="https://picsum.photos/536/354"
                             alt="Avatar"
                             className="followAvatar"
@@ -26,7 +27,7 @@ const Following = () => {
                 </div>
                 <div className="follow">
                     <div className="followName">
-                        <img
+                        <Image
                             src="https://picsum.photos/536/514"
                             alt="Avatar"
                             className="followAvatar"

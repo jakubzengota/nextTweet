@@ -1,4 +1,5 @@
 
+import Image from 'next/image';
 interface AccountProfileProps {
     children: React.ReactNode;
     className?: string;
@@ -7,7 +8,7 @@ const AccountProfile = () => {
     return (
         <div className="AccountProfileMain">
             
-                  <img
+                  <Image
                     src="https://picsum.photos/536/354"
                     alt="Avatar"
                     className="AccountProfileAvatar"

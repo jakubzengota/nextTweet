@@ -77,7 +77,7 @@ const Login = () => {
                     onChange={handleInputChange}
                 />
                 <div>
-                    Don't have an account?{" "}
+                    <span>Dont have an account?</span>
                     <Link style={{ color: "black" }} href="/register">
                         <span>Sign up</span>
                     </Link>

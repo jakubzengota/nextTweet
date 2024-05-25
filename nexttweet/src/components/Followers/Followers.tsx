@@ -1,5 +1,5 @@
 import { SlUserFollow } from "react-icons/sl";
-
+import Image from 'next/image';
 interface FollowersProps {
     children: React.ReactNode;
     className?: string;
@@ -14,7 +14,7 @@ const Followers = () => {
                 <div className="follow">
                     
                     <div className="followName">
-                        <img
+                        <Image
                             src="https://picsum.photos/536/354"
                             alt="Avatar"
                             className="followAvatar"

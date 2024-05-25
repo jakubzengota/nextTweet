@@ -36,6 +36,7 @@
     "react-icons": "^5.0.1",
     "react-modal": "^3.16.1",
     "react-tiny-fab": "^4.0.4",
+    "sharp": "^0.33.4",
     "vercel": "^33.5.2"
   },
   "devDependencies": {

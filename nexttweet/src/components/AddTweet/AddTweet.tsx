@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Loading from "../../assets/ZKZg.gif";
+import Image from 'next/image';
 
 const AddTweet = () => {
   const [tweetText, setTweetText] = useState("");
@@ -40,7 +41,7 @@ const AddTweet = () => {
   return (
     <div className="AddTweet">
       <div>
-        <img
+        <Image
           src="https://picsum.photos/536/354"
           alt="Avatar"
           className="AccountProfileAvatar"
