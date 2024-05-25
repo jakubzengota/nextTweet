@@ -14,8 +14,8 @@ const pool = new Pool({
   port: 5432,
 });
 
-// node init-db
-// Wyjebac usersa, i nowa tabele, Imie, nazwisko, liczba obserwujacych, liczba obserwowanych, STATUS(usuniety czy nie), maila, 
+// node init-d
+
 
 const createTableUsers = `
 CREATE TABLE IF NOT EXISTS users (
