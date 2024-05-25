@@ -41,6 +41,8 @@ const Tweets = () => {
         
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
+            }else{
+              window.open("/dashboard", "_self");
             }
         
           } catch (error) {
