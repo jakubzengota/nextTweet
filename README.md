@@ -160,4 +160,9 @@ DATABASE: (tutaj screenshot z Vercela)
 Thank you for your interest in NextTweet! We welcome collaboration and feedback to improve the project.
 
 
-(kto byl za co odpowiedzialny z projekcie)
+
+
+
+
+
+
