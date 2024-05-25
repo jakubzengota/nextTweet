@@ -3,7 +3,7 @@ import Welcome from "../../assets/welcome.png";
 const LPWImgage = () =>{
     return (
         <div className="landingPageWelcomeImage">
-            <Image src={Welcome} alt="welcome" className="landingPageWelcomeImageImg"/>
+            <Image width={500} height={500} src={Welcome} alt="welcome" className="landingPageWelcomeImageImg"/>
         </div>
     )
 }

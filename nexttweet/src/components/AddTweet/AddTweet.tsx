@@ -42,8 +42,10 @@ const AddTweet = () => {
     <div className="AddTweet">
       <div>
         <Image
-          src="https://picsum.photos/536/354"
+          src={"https://picsum.photos/536/354"}
           alt="Avatar"
+          height={50}
+          width={50}
           className="AccountProfileAvatar"
         />
         <div className="AccountProfileName">

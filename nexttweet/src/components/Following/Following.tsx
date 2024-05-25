@@ -15,8 +15,10 @@ const Following = () => {
                 <div className="follow">
                     <div className="followName">
                         <Image
-                            src="https://picsum.photos/536/354"
+                            src={"https://picsum.photos/536/354"}
                             alt="Avatar"
+                            width={50}
+                            height={50}
                             className="followAvatar"
                         />
                         <span>John Smith</span>
@@ -28,8 +30,10 @@ const Following = () => {
                 <div className="follow">
                     <div className="followName">
                         <Image
-                            src="https://picsum.photos/536/514"
+                            src={"https://picsum.photos/536/353"}
                             alt="Avatar"
+                            width={50}
+                            height={50}
                             className="followAvatar"
                         />
                         <span>John Smith</span>

@@ -7,7 +7,7 @@ const LandingPageOpinion = () => {
                 <span>&quot;Najlepszy portal tego typu w Polsce!&quot;</span>
             </div>
             <div className="landingPageOpinion_person">
-                <Image src={Avatar} alt="avatar" className="landingPageOpinion_personImg"/>
+                <Image width={50} height={50} src={Avatar} alt="avatar" className="landingPageOpinion_personImg"/>
                 <span className="landingPageOpinion_personName">Adam Nowak</span>
             </div>
         </div>

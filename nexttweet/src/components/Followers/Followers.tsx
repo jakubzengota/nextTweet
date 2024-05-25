@@ -17,6 +17,8 @@ const Followers = () => {
                         <Image
                             src="https://picsum.photos/536/354"
                             alt="Avatar"
+                            width={50}
+                            height={50}
                             className="followAvatar"
                         />
                         <span>John Smith</span>
