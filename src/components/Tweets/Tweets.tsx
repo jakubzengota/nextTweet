@@ -38,12 +38,12 @@ const Tweets = () => {
                     tweet_id: id
                 }),
             });
+            window.open("/dashboard", "_self");
         
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
-            }else{
-              window.open("/dashboard", "_self");
             }
+              
         
           } catch (error) {
             console.error("Error fetching tweets:", error);
