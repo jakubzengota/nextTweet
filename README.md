@@ -60,7 +60,7 @@ This will launch the application on http://localhost:3000 or the next available 
 By focusing on these aspects, we strive to create a dynamic and engaging environment that keeps users informed and connected, no matter where they are.
 
 
-## Technologies
+# Technologies
 
 - **SASS (SCSS):**
   - We use SCSS for styling the project. SCSS allows nesting of classes within other classes, making the CSS more modular and easier to maintain.
@@ -95,7 +95,7 @@ By focusing on these aspects, we strive to create a dynamic and engaging environ
 
 
 
-## View of our project
+# View of our project
 ![1](https://github.com/jakubzengota/nextTweet/assets/147444905/7435d2c0-be23-40d5-ab4b-6609e304dcd6)
 The image displays the homepage of a platform called "NextTweet". The background is a gradient of purple shades, and the artwork on the right side includes various icons and abstract shapes, symbolizing communication and connectivity. The top right corner has options to "Log In" and "Register."
 
