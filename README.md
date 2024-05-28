@@ -114,7 +114,7 @@ The image shows view of the user profile page for "NextTweet". The profile of Em
 
 
 
-## Endpoints
+# Endpoints
 
 Here are the available endpoints with detailed descriptions:
 
