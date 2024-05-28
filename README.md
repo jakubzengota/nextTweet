@@ -94,11 +94,23 @@ Used libraries:
 
 ## View of our project  (screeny i lekki opis co na screenach)
 ![1](https://github.com/jakubzengota/nextTweet/assets/147444905/7435d2c0-be23-40d5-ab4b-6609e304dcd6)
-![2](https://github.com/jakubzengota/nextTweet/assets/147444905/0790482e-3cbc-4eb4-a554-cefaead62f6f)
-![3](https://github.com/jakubzengota/nextTweet/assets/147444905/64717da2-373b-4d39-91a5-183485d0223d)
-![4](https://github.com/jakubzengota/nextTweet/assets/147444905/ae1bd180-e239-4251-bcec-fb2e1ab1fe39)
-![5](https://github.com/jakubzengota/nextTweet/assets/147444905/643ee8ca-8f80-4b67-a45f-35a89b62d4bf)
+The image displays the homepage of a platform called "NextTweet". The background is a gradient of purple shades, and the artwork on the right side includes various icons and abstract shapes, symbolizing communication and connectivity. The top right corner has options to "Log In" and "Register."
 
+![2](https://github.com/jakubzengota/nextTweet/assets/147444905/0790482e-3cbc-4eb4-a554-cefaead62f6f)
+The image shows the login page of the "NextTweet" platform. It features a login form where users can enter their email or phone number and password to access their accounts.
+
+
+![3](https://github.com/jakubzengota/nextTweet/assets/147444905/64717da2-373b-4d39-91a5-183485d0223d)
+The image shows the registration page for the "NextTweet" platform. It features a registration form where users can enter their username, email, password, and confirm their password to create a new account. At the bottom of the form, there is a "Register" button, and a link for existing users to sign in if they already have an account.
+
+
+![4](https://github.com/jakubzengota/nextTweet/assets/147444905/ae1bd180-e239-4251-bcec-fb2e1ab1fe39)
+The user, EmilyJones, has a profile picture and a list of their recent tweets. Each tweet displays the content, date, time, and engagement metrics such as likes and comments. At the top of the page, there is a text box for composing new tweets and a "Post" button. The top right corner provides navigation options including "Dashboard", "Profile", and "Log Out". 
+
+
+
+![5](https://github.com/jakubzengota/nextTweet/assets/147444905/643ee8ca-8f80-4b67-a45f-35a89b62d4bf)
+The image shows view of the user profile page for "NextTweet". The profile of EmilyJones is displayed prominently, showing her profile picture, name, and location (San Francisco). Below her profile information, there are statistics for her latest tweets, trending tweets, and notifications. On the right side, there are sections showing the accounts EmilyJones is following and her followers, each with the follower’s profile picture and name.
 
 
 
