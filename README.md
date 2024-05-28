@@ -138,7 +138,7 @@ get user (pobranie info od usera)
 
 
 
-## Future Plans
+# Future Plans
 
 The project is in active development. Here are some features we plan to implement:
 
@@ -153,15 +153,23 @@ The project is in active development. Here are some features we plan to implemen
 
 - **User Profiles:**
   - Providing detailed user profiles where users can view their tweets, followers, and following lists.
- 
-    (autentykacja za pomoca googla, facebooka i githuba)
-    (weryfikacja mailowa)
-    (zmiana maila)
-    (przypomnienie hasla)
-    (chat pomiedzy userami za pomocą web socketów)
 
+- **Authentication via Google, Facebook, and GitHub:**
+  - Users will be able to sign in using their Google, Facebook, or GitHub accounts for a seamless login experience.
 
-## Database Authentication
+- **Email Verification:**
+  - Implementing email verification to ensure the validity and security of user accounts.
+
+- **Email Change:**
+  - Allowing users to update their email addresses to keep their account information current.
+
+- **Password Reset:**
+  - Providing a password reset feature to help users regain access to their accounts if they forget their passwords.
+  - 
+- **User Chat via WebSockets:**
+  - Enabling real-time chat between users using WebSockets for instant communication.
+
+# Database Authentication
 
 Database authentication details for Postgres are stored in the `.env` file. When setting up a new database on Vercel, you can use the `unitDB` file to create the necessary tables.
 
