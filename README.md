@@ -126,16 +126,22 @@ When logging in, a token is received for authentication and authorization purpos
 The entire authentication process uses JWT tokens. Logging out removes the token from the user, effectively ending the session.
 
 - `POST /api/register` - Register a new user
+  
 ![1](https://github.com/jakubzengota/nextTweet/assets/147444905/af591cd9-1536-433f-b7bb-885fad099f69)
 ![2](https://github.com/jakubzengota/nextTweet/assets/147444905/800e5e61-451b-4124-82b0-753e7e22646e)
 The password must meet the specified requirements for complexity and security. Upon registration, the password is automatically hashed using the bcrypt library and stored in the database in its hashed form.
 
-/api.tweet/add tweet               add tweet jako kolejny (nie trzeba za bardzo opisywac)
-  
-- `GET /api/tweets` - Fetch/get all tweets
+- `POST /api.tweet/addTweet` - Add tweet
+![1](https://github.com/jakubzengota/nextTweet/assets/147444905/e9971ca3-4958-4db2-866b-56fb93e7c7a1)
+
+
+- `GET /api.tweet/tweets` - get all tweets
+![2](https://github.com/jakubzengota/nextTweet/assets/147444905/e12d69a2-ae28-4247-bcc5-35bbde70e2ca)
+
 
 get user (pobranie info od usera)
-
+- `GET /api.Users/getUsers` - get all users
+![3](https://github.com/jakubzengota/nextTweet/assets/147444905/d80a54ff-290d-479f-8611-6341380c2279)
 
 
 # Future Plans
