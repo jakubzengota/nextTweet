@@ -122,13 +122,13 @@ Here are the available endpoints with detailed descriptions:
 
 ![1](https://github.com/jakubzengota/nextTweet/assets/147444905/551f59e2-76f9-40d2-b66f-2257eff8f8da)
 ![2](https://github.com/jakubzengota/nextTweet/assets/147444905/89766320-683d-456a-97a1-0c043844d545)
-w loginie jest ten token otrzymujemy
+When logging in, a token is received for authentication and authorization purposes.
+The entire authentication process uses JWT tokens. Logging out removes the token from the user, effectively ending the session.
 
 - `POST /api/register` - Register a new user
-jakie wymaganie odnosnie hasla i ze automatycznie haslo jest hashowane biblioteka bcript i w bazie zapisywane w formie hasha
-
-
-Cała autentykacja dziala za pomoca JWT tokena i wylogowywanie zdejmuje z użytkownika token.
+![1](https://github.com/jakubzengota/nextTweet/assets/147444905/af591cd9-1536-433f-b7bb-885fad099f69)
+![2](https://github.com/jakubzengota/nextTweet/assets/147444905/800e5e61-451b-4124-82b0-753e7e22646e)
+The password must meet the specified requirements for complexity and security. Upon registration, the password is automatically hashed using the bcrypt library and stored in the database in its hashed form.
 
 /api.tweet/add tweet               add tweet jako kolejny (nie trzeba za bardzo opisywac)
   
