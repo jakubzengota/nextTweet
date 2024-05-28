@@ -1,6 +1,6 @@
 # NextTweet
 
-![NextTweet Logo](path-to-your-logo.png)
+![NextTweet Logo]("C:\Users\kryst\OneDrive\Desktop\nextTweet\nexttweet\src\assets\logo.png")
 
 ## Table of Contents
 1. [Project Description](#project-description)
