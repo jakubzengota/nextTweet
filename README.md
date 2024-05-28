@@ -139,7 +139,6 @@ The password must meet the specified requirements for complexity and security. U
 ![2](https://github.com/jakubzengota/nextTweet/assets/147444905/e12d69a2-ae28-4247-bcc5-35bbde70e2ca)
 
 
-get user (pobranie info od usera)
 - `GET /api.Users/getUsers` - get all users
 ![3](https://github.com/jakubzengota/nextTweet/assets/147444905/d80a54ff-290d-479f-8611-6341380c2279)
 
@@ -187,6 +186,8 @@ const Pool = new Pool({
 DATABASE: (tutaj screenshot z Vercela)
 
 ![image](https://github.com/jakubzengota/nextTweet/assets/147444905/13c3390d-7c69-43a6-a140-3dfb0c17fef8)
+
+Who was responsible for what:
 
 
 Thank you for your interest in NextTweet! We welcome collaboration and feedback to improve the project.
