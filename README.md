@@ -1,6 +1,6 @@
 # NextTweet
+![logo](https://github.com/jakubzengota/nextTweet/assets/147444905/cc50f920-ed8a-470f-acc8-fbdcb0bae9b7)
 
-![NextTweet Logo]("C:\Users\kryst\OneDrive\Desktop\nextTweet\nexttweet\src\assets\logo.png")
 
 ## Table of Contents
 1. [Project Description](#project-description)
