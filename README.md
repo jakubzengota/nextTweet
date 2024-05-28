@@ -94,14 +94,9 @@ Used libraries:
 
 ## View of our project  (screeny i lekki opis co na screenach)
 ![1](https://github.com/jakubzengota/nextTweet/assets/147444905/7435d2c0-be23-40d5-ab4b-6609e304dcd6)
-![1](https://github.com/jakubzengota/nextTweet/assets/147444905/7435d2c0-be23-40d5-ab4b-6609e304dcd6)
-![2](https://github.com/jakubzengota/nextTweet/assets/147444905/0790482e-3cbc-4eb4-a554-cefaead62f6f)
 ![2](https://github.com/jakubzengota/nextTweet/assets/147444905/0790482e-3cbc-4eb4-a554-cefaead62f6f)
 ![3](https://github.com/jakubzengota/nextTweet/assets/147444905/64717da2-373b-4d39-91a5-183485d0223d)
-![3](https://github.com/jakubzengota/nextTweet/assets/147444905/64717da2-373b-4d39-91a5-183485d0223d)
 ![4](https://github.com/jakubzengota/nextTweet/assets/147444905/ae1bd180-e239-4251-bcec-fb2e1ab1fe39)
-![4](https://github.com/jakubzengota/nextTweet/assets/147444905/ae1bd180-e239-4251-bcec-fb2e1ab1fe39)
-![5](https://github.com/jakubzengota/nextTweet/assets/147444905/643ee8ca-8f80-4b67-a45f-35a89b62d4bf)
 ![5](https://github.com/jakubzengota/nextTweet/assets/147444905/643ee8ca-8f80-4b67-a45f-35a89b62d4bf)
 
 
