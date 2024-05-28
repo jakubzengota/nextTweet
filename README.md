@@ -49,7 +49,7 @@ This will launch the application on http://localhost:3000 or the next available 
 
 
 
-**Key features of our application include:**
+# Key features of our application include:
 
 **Social Interactions:** Users can engage with the content and with each other through likes, follows, and retweets, enhancing the social experience.
 
