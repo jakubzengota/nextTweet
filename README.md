@@ -40,9 +40,7 @@ To set up the project locally, follow these steps:
     ```
 4. **Create a `.env` file:**
     - Copy the `.env.example` file to `.env` and fill in the necessary environment variables.
-
-  (jezeli ktos chce sobie postawic baze w vercelu to moze skorzystac automatycznego tworzenia tabel tweets, users, followings z pliku init-db.js uruchamiajac za pomocą komendy: node initdb
-  
+    - If you want to set up the database on Vercel, you can automatically create the tweets, users, and followings tables by running the initialization script: **node init-db.js**  
 5. **Start the project:**
     ```bash
     npm run dev
@@ -79,11 +77,7 @@ By focusing on these aspects, we strive to create a dynamic and engaging environ
 
 
 
-
-
-
-
-Used libraries:
+**Used libraries:**
 
 - @fortawesome/free-brands-svg-icons
 - @fortawesome/react-fontawesome
